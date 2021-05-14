@@ -72,16 +72,16 @@ function App() {
           }}
         >
           <Row justify="center">
-            <Col xs={24} sm={24} md={6} lg={8} xl={8}>
+            <Col xs={24} sm={24} md={24} lg={8} xl={8}>
               <Col span={24} className="name_heading">
                 <Row align="middle" justify="center">
-                  <Col xs={24} sm={24} md={6} lg={6} xl={6}></Col>
+                  <Col xs={24} sm={24} md={24} lg={6} xl={6}></Col>
                   <Col
-                    xs={0}
-                    sm={0}
-                    md={6}
-                    lg={18}
-                    xl={18}
+                    xs={{ span: 0, order: 0 }}
+                    sm={{ span: 0, order: 0 }}
+                    md={{ span: 18, order: 1 }}
+                    lg={{ span: 18, order: 1 }}
+                    xl={{ span: 18, order: 1 }}
                     style={{
                       fontFamily: "sans-serif",
                       fontSize: "18px",
@@ -125,7 +125,6 @@ function App() {
                     Babu
                   </Col>
                   <Col
-                    span={24}
                     xs={{ span: 24, order: 1 }}
                     sm={{ span: 24, order: 1 }}
                     md={{ span: 24, order: 1 }}
@@ -210,7 +209,13 @@ function App() {
               </Col>
             </Col>
 
-            <Col span={16}>
+            <Col
+              xs={{ span: 0 }}
+              sm={{ span: 0 }}
+              md={{ span: 20 }}
+              lg={{ span: 16 }}
+              xl={{ span: 16 }}
+            >
               <Row align="middle">
                 <Col
                   span={24}
@@ -224,7 +229,7 @@ function App() {
                     <Col
                       xs={{ span: 0 }}
                       sm={{ span: 0 }}
-                      md={{ span: 24 }}
+                      md={{ span: 11 }}
                       lg={{ span: 11 }}
                       xl={{ span: 11 }}
                     >
@@ -246,7 +251,7 @@ function App() {
                     <Col
                       xs={{ span: 0 }}
                       sm={{ span: 0 }}
-                      md={{ span: 24 }}
+                      md={{ span: 2 }}
                       lg={{ span: 2 }}
                       xl={{ span: 2 }}
                     >
@@ -258,7 +263,7 @@ function App() {
                     <Col
                       xs={{ span: 0 }}
                       sm={{ span: 0 }}
-                      md={{ span: 24 }}
+                      md={{ span: 11 }}
                       lg={{ span: 11 }}
                       xl={{ span: 11 }}
                       className="sub_heading"
@@ -333,7 +338,7 @@ function App() {
                     <Col
                       xs={{ span: 0 }}
                       sm={{ span: 0 }}
-                      md={{ span: 24 }}
+                      md={{ span: 0 }}
                       lg={{ span: 1 }}
                       xl={{ span: 1 }}
                     >
@@ -348,6 +353,7 @@ function App() {
                       md={{ span: 24 }}
                       lg={{ span: 6 }}
                       xl={{ span: 6 }}
+                      className="sub_heading"
                     >
                       <Col
                         span={24}
@@ -408,6 +414,7 @@ function App() {
                       md={{ span: 24 }}
                       lg={{ span: 24 }}
                       xl={{ span: 24 }}
+                      className="sub_heading"
                       style={{
                         fontSize: "14px",
                         textAlign: "left",
@@ -471,7 +478,13 @@ function App() {
                       }}
                     >
                       <Row style={{ marginBottom: "32px" }}>
-                        <Col span={12}>
+                        <Col
+                          xs={{ span: 0 }}
+                          sm={{ span: 0 }}
+                          md={{ span: 24 }}
+                          lg={{ span: 24 }}
+                          xl={{ span: 12 }}
+                        >
                           <Card
                             hoverable
                             style={{ width: 500, cursor: "pointer" }}
@@ -487,7 +500,14 @@ function App() {
                             />
                           </Card>
                         </Col>
-                        <Col span={12}>
+                        <Col
+                          xs={{ span: 0 }}
+                          sm={{ span: 0 }}
+                          md={{ span: 24 }}
+                          lg={{ span: 24 }}
+                          xl={{ span: 12 }}
+                          className="sub_heading"
+                        >
                           <Card
                             hoverable
                             style={{ width: 500, cursor: "pointer" }}
@@ -503,7 +523,14 @@ function App() {
                             />
                           </Card>
                         </Col>
-                        <Col span={12} style={{ marginTop: "20px" }}>
+                        <Col
+                          xs={{ span: 0 }}
+                          sm={{ span: 0 }}
+                          md={{ span: 24 }}
+                          lg={{ span: 24 }}
+                          xl={{ span: 12 }}
+                          style={{ marginTop: "20px" }}
+                        >
                           <Card
                             hoverable
                             style={{ width: 500, cursor: "pointer" }}
@@ -519,7 +546,14 @@ function App() {
                             />
                           </Card>
                         </Col>
-                        <Col span={12} style={{ marginTop: "20px" }}>
+                        <Col
+                          xs={{ span: 0 }}
+                          sm={{ span: 0 }}
+                          md={{ span: 24 }}
+                          lg={{ span: 24 }}
+                          xl={{ span: 12 }}
+                          style={{ marginTop: "20px" }}
+                        >
                           <Card
                             hoverable
                             style={{ width: 500, cursor: "pointer" }}

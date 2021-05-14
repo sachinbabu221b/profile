@@ -55,10 +55,9 @@
   margin-top: 56px;
   padding: 6px;
   color: #333;
-
 }
 .linkedIn_padding {
-  padding-left: 120px
+  padding-left: 120px;
 }
 .sub_heading {
   margin-top: 0px;
@@ -66,6 +65,50 @@
 @media screen and (max-width: 320px) and (min-width: 200px) {
   .name_heading {
     margin-top: 0px;
+  }
+  .style_connect {
+    margin-top: 16px;
+  }
+  .sub_heading {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 450px) and (min-width: 200px) {
+  .name_heading {
+    margin-top: 0px;
+  }
+  .style_connect {
+    margin-top: 16px;
+  }
+  .sub_heading {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 451px) {
+  .name_heading {
+    margin-top: 0px;
+  }
+  .style_connect {
+    margin-top: 16px;
+  }
+  .sub_heading {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .linkedIn_padding {
+    padding-left: 8px;
+  }
+  .style_connect {
+    margin-top: 16px;
+  }
+  .sub_heading {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 1140px) and (min-width: 1025px) {
+  .linkedIn_padding {
+    padding-left: 120px;
   }
   .style_connect {
     margin-top: 16px;
