@@ -45,6 +45,7 @@ function App() {
               span={12}
               style={{
                 textAlign: "left",
+                paddingTop: "8px",
               }}
             >
               <img src={logo} width="42px" />
@@ -55,12 +56,12 @@ function App() {
                 textAlign: "right",
               }}
             >
-              <Switch
-                style={{ background: "#EEE841", color: "#000" }}
-                checkedChildren="Light"
-                unCheckedChildren="Dark"
-                defaultChecked
-              />
+              {/* <Switch
+                  style={{ background: "#EEE841", color: "#000" }}
+                  checkedChildren="Light"
+                  unCheckedChildren="Dark"
+                  defaultChecked
+                /> */}
             </Col>
           </Row>
         </Header>
@@ -71,18 +72,16 @@ function App() {
           }}
         >
           <Row justify="center">
-            <Col span={8}>
-              <Col
-                span={24}
-                style={{
-                  textAlign: "center",
-                  marginTop: "62px",
-                }}
-              >
+            <Col xs={24} sm={24} md={6} lg={8} xl={8}>
+              <Col span={24} className="name_heading">
                 <Row align="middle" justify="center">
-                  <Col span={6}></Col>
+                  <Col xs={24} sm={24} md={6} lg={6} xl={6}></Col>
                   <Col
-                    span={18}
+                    xs={0}
+                    sm={0}
+                    md={6}
+                    lg={18}
+                    xl={18}
                     style={{
                       fontFamily: "sans-serif",
                       fontSize: "18px",
@@ -94,7 +93,11 @@ function App() {
                   </Col>
                   <Col span={6}></Col>
                   <Col
-                    span={18}
+                    xs={{ span: 18, order: 2 }}
+                    sm={{ span: 18, order: 1 }}
+                    md={{ span: 18, order: 1 }}
+                    lg={{ span: 18, order: 1 }}
+                    xl={{ span: 18, order: 1 }}
                     style={{
                       fontFamily: "sans-serif",
                       fontSize: "36px",
@@ -106,7 +109,11 @@ function App() {
                   </Col>
                   <Col span={6}></Col>
                   <Col
-                    span={18}
+                    xs={{ span: 18, order: 3 }}
+                    sm={{ span: 18, order: 1 }}
+                    md={{ span: 18, order: 1 }}
+                    lg={{ span: 18, order: 1 }}
+                    xl={{ span: 18, order: 1 }}
                     style={{
                       fontFamily: "sans-serif",
                       fontSize: "36px",
@@ -119,47 +126,45 @@ function App() {
                   </Col>
                   <Col
                     span={24}
+                    xs={{ span: 24, order: 1 }}
+                    sm={{ span: 24, order: 1 }}
+                    md={{ span: 24, order: 1 }}
+                    lg={{ span: 24, order: 1 }}
+                    xl={{ span: 24, order: 1 }}
                     style={{
                       paddingTop: "36px",
                     }}
                   >
                     <img width="242px" src={profile} />
                   </Col>
-                  <Col span={6} />
+                  <Col
+                    xs={{ span: 0 }}
+                    sm={{ span: 7 }}
+                    md={{ span: 7 }}
+                    lg={{ span: 7 }}
+                    xl={{ span: 7 }}
+                  />
 
                   <Col
-                    span={7}
-                    style={{
-                      background: "#fddb3a",
-                      fontFamily: "sans-serif",
-                      fontSize: "24px",
-                      fontWeight: "bolder",
-                      textAlign: "left",
-                      marginTop: "56px",
-                      padding: "6px",
-                      color: "#333",
-                    }}
+                    xs={{ span: 12, order: 4 }}
+                    sm={{ span: 12, order: 4 }}
+                    md={{ span: 7, order: 1 }}
+                    lg={{ span: 7, order: 1 }}
+                    xl={{ span: 7, order: 1 }}
+                    className="style_connect"
                   >
                     Connect_.
                   </Col>
                   <Col span={11} />
                   <Col span={3} />
                   <Col
-                    span={21}
+                    xs={{ span: 22, order: 5 }}
+                    sm={{ span: 18, order: 1 }}
+                    md={{ span: 18, order: 1 }}
+                    lg={{ span: 18, order: 1 }}
+                    xl={{ span: 18, order: 1 }}
                     style={{ paddingTop: "24px", marginBottom: "20px" }}
                   >
-                    <LinkedinOutlined
-                      onClick={() =>
-                        window.open(
-                          "https://www.linkedin.com/in/sachin-babu-69a93b177/"
-                        )
-                      }
-                      style={{
-                        fontSize: "32px",
-                        paddingRight: "24px",
-                        cursor: "pointer",
-                      }}
-                    />
                     <MediumOutlined
                       onClick={() =>
                         window.open("https://sachinbabu6174.medium.com/")
@@ -183,6 +188,24 @@ function App() {
                     />
                     <InstagramOutlined style={{ fontSize: "32px" }} />
                   </Col>
+                  <Col
+                    xs={{ span: 0, order: 6 }}
+                    sm={{ span: 0, order: 6 }}
+                    md={{ span: 0, order: 6 }}
+                    lg={{ span: 24, order: 6 }}
+                    xl={{ span: 24, order: 6 }}
+                    className="linkedIn_padding"
+                  >
+                    <div
+                      class="badge-base LI-profile-badge"
+                      data-locale="en_US"
+                      data-size="large"
+                      data-theme="dark"
+                      data-type="HORIZONTAL"
+                      data-vanity="sachin-babu-69a93b177"
+                      data-version="v1"
+                    ></div>
+                  </Col>
                 </Row>
               </Col>
             </Col>
@@ -198,7 +221,13 @@ function App() {
                   }}
                 >
                   <Row>
-                    <Col span={11}>
+                    <Col
+                      xs={{ span: 0 }}
+                      sm={{ span: 0 }}
+                      md={{ span: 24 }}
+                      lg={{ span: 11 }}
+                      xl={{ span: 11 }}
+                    >
                       <Col
                         span={24}
                         style={{
@@ -214,13 +243,26 @@ function App() {
                         42 Square Technologies.
                       </Col>
                     </Col>
-                    <Col span={2}>
+                    <Col
+                      xs={{ span: 0 }}
+                      sm={{ span: 0 }}
+                      md={{ span: 24 }}
+                      lg={{ span: 2 }}
+                      xl={{ span: 2 }}
+                    >
                       <Divider
                         type="vertical"
                         style={{ height: "70px", background: "#fff" }}
                       />
                     </Col>
-                    <Col span={11}>
+                    <Col
+                      xs={{ span: 0 }}
+                      sm={{ span: 0 }}
+                      md={{ span: 24 }}
+                      lg={{ span: 11 }}
+                      xl={{ span: 11 }}
+                      className="sub_heading"
+                    >
                       <Col
                         span={24}
                         style={{
@@ -250,7 +292,13 @@ function App() {
                   }}
                 >
                   <Row>
-                    <Col span={17}>
+                    <Col
+                      xs={{ span: 0 }}
+                      sm={{ span: 0 }}
+                      md={{ span: 24 }}
+                      lg={{ span: 17 }}
+                      xl={{ span: 17 }}
+                    >
                       <Col
                         span={24}
                         style={{
@@ -282,13 +330,25 @@ function App() {
                         deployment. Cheers😁
                       </Col>
                     </Col>
-                    <Col span={1}>
+                    <Col
+                      xs={{ span: 0 }}
+                      sm={{ span: 0 }}
+                      md={{ span: 24 }}
+                      lg={{ span: 1 }}
+                      xl={{ span: 1 }}
+                    >
                       <Divider
                         type="vertical"
                         style={{ height: "200px", background: "#fff" }}
                       />
                     </Col>
-                    <Col span={6}>
+                    <Col
+                      xs={{ span: 0 }}
+                      sm={{ span: 0 }}
+                      md={{ span: 24 }}
+                      lg={{ span: 6 }}
+                      xl={{ span: 6 }}
+                    >
                       <Col
                         span={24}
                         style={{
@@ -343,7 +403,11 @@ function App() {
                       </Col>
                     </Col>
                     <Col
-                      span={24}
+                      xs={{ span: 0 }}
+                      sm={{ span: 0 }}
+                      md={{ span: 24 }}
+                      lg={{ span: 24 }}
+                      xl={{ span: 24 }}
                       style={{
                         fontSize: "14px",
                         textAlign: "left",
@@ -354,7 +418,11 @@ function App() {
                       ARTICLES
                     </Col>
                     <Col
-                      span={24}
+                      xs={{ span: 0 }}
+                      sm={{ span: 0 }}
+                      md={{ span: 24 }}
+                      lg={{ span: 24 }}
+                      xl={{ span: 24 }}
                       style={{
                         color: "#fff",
                         fontSize: "16px",
@@ -375,7 +443,11 @@ function App() {
                       </Card>
                     </Col>
                     <Col
-                      span={24}
+                      xs={{ span: 0 }}
+                      sm={{ span: 0 }}
+                      md={{ span: 24 }}
+                      lg={{ span: 24 }}
+                      xl={{ span: 24 }}
                       style={{
                         fontSize: "14px",
                         textAlign: "left",
@@ -387,14 +459,18 @@ function App() {
                       PROJECTS
                     </Col>
                     <Col
-                      span={24}
+                      xs={{ span: 0 }}
+                      sm={{ span: 0 }}
+                      md={{ span: 24 }}
+                      lg={{ span: 24 }}
+                      xl={{ span: 24 }}
                       style={{
                         color: "#fff",
                         fontSize: "16px",
                         marginTop: "8px",
                       }}
                     >
-                      <Row>
+                      <Row style={{ marginBottom: "32px" }}>
                         <Col span={12}>
                           <Card
                             hoverable
@@ -417,13 +493,29 @@ function App() {
                             style={{ width: 500, cursor: "pointer" }}
                             onClick={() =>
                               window.open(
-                                "https://www.linkedin.com/feed/update/urn:li:activity:6655311031889420288/"
+                                "https://www.linkedin.com/feed/update/urn:li:activity:6652901513150767104/"
                               )
                             }
                           >
                             <Meta
-                              title="E-Commerce Vegeseller"
-                              description="Simple vegetable selling e-commerce application made using ReactJs, MongoDB, AWS, Razorpay, AntD and Figma"
+                              title="Image Filters"
+                              description="Altering the image by applying various filters using ReactJs. We can choose filters from a given list and customize the ratio's"
+                            />
+                          </Card>
+                        </Col>
+                        <Col span={12} style={{ marginTop: "20px" }}>
+                          <Card
+                            hoverable
+                            style={{ width: 500, cursor: "pointer" }}
+                            onClick={() =>
+                              window.open(
+                                "https://www.linkedin.com/feed/update/urn:li:activity:6659678211812786176/"
+                              )
+                            }
+                          >
+                            <Meta
+                              title="Animation Using Vue.JS"
+                              description="Illustrating animations using animation libraries like GSAP and Vue.JS libraries for a static animation website."
                             />
                           </Card>
                         </Col>
@@ -438,38 +530,10 @@ function App() {
                             }
                           >
                             <Meta
-                              title="E-Commerce Vegeseller"
-                              description="Simple vegetable selling e-commerce application made using ReactJs, MongoDB, AWS, Razorpay, AntD and Figma"
+                              title="HTML Converter"
+                              description="A simple javascript application to convert the given code into designed elements."
                             />
                           </Card>
-                        </Col>
-                        <Col span={12} style={{ marginTop: "20px" }}>
-                          <Card
-                            hoverable
-                            style={{ width: 500, cursor: "pointer" }}
-                            onClick={() =>
-                              window.open(
-                                "https://www.linkedin.com/feed/update/urn:li:activity:6655311031889420288/"
-                              )
-                            }
-                          >
-                            <Meta
-                              title="E-Commerce Vegeseller"
-                              description="Simple vegetable selling e-commerce application made using ReactJs, MongoDB, AWS, Razorpay, AntD and Figma"
-                            />
-                          </Card>
-                        </Col>
-                        <Col
-                          span={24}
-                          style={{
-                            fontSize: "14px",
-                            textAlign: "left",
-                            fontWeight: 400,
-                            color: "#fff",
-                            marginTop: "20px",
-                          }}
-                        >
-                          CERTIFICATIONS
                         </Col>
                       </Row>
                     </Col>
