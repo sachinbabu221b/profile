@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Row, Col, Layout } from "antd";
 import { Scrollbars } from "react-custom-scrollbars";
+import ReactGA from "react-ga";
 import Footers from "./components/footer";
 import Headers from "./components/header";
 import CompanyInfo from "./components/company";
@@ -15,6 +16,13 @@ import "./App.css";
 const { Content } = Layout;
 
 function App() {
+  useEffect(() => {
+    const initializeReactGA = () => {
+      ReactGA.initialize("G-89N2RBC513");
+      ReactGA.pageview("/");
+    };
+    initializeReactGA();
+  }, []);
   return (
     <Layout>
       <Scrollbars
