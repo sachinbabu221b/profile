@@ -14,15 +14,9 @@ import "antd/dist/antd.css";
 import "./App.css";
 
 const { Content } = Layout;
-
+const TRACKING_ID = "UA-197695862-1";
+ReactGA.initialize(TRACKING_ID);
 function App() {
-  useEffect(() => {
-    const initializeReactGA = () => {
-      ReactGA.initialize("G-89N2RBC513");
-      ReactGA.pageview("/");
-    };
-    initializeReactGA();
-  }, []);
   return (
     <Layout>
       <Scrollbars
