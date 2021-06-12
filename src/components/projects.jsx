@@ -17,7 +17,8 @@ const ProjectCard = (props) => {
         className="card_projects"
         onClick={() => window.open(link)}
       >
-        <Meta title={title} description={description} />
+        <h3 style={{ color: "#808080" }}>{title}</h3>
+        <div style={{ color: "#808080" }}>{description}</div>
       </Card>
     </Col>
   );

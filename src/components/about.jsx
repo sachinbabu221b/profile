@@ -25,7 +25,7 @@ const AboutAndSkills = () => {
             working around in ReactJS and Redux. Worked on Tele-medicine and
             Anomaly detection platforms. Also created some sample apps using
             AWS, MongoDB, ReactJS and for Designing purpose use AntD and Figma.
-            Fast-forward to today,Mainly working on cross browser extension and
+            Fast-forward to today, Mainly working on cross browser extension and
             firebase. I love building things around and my interest lies in
             frontend, backend and deployment. Cheers😁
           </Col>

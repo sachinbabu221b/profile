@@ -66,11 +66,29 @@ const Profile = () => {
                     window.open("https://sachinbabu6174.medium.com/")
                   }
                   className="social_icon"
+                  style={{ color: "#C7C7C7" }}
                 />
-                <GoogleOutlined className="social_icon" />
-                <GithubOutlined className="social_icon" />
-                <GitlabOutlined className="social_icon" />
-                <InstagramOutlined className="social_icon" />
+
+                <GoogleOutlined
+                  className="social_icon"
+                  onClick={() => window.open("mailto:sachinbabu6174@gmail.com")}
+                  style={{ color: "#C7C7C7" }}
+                />
+                <GithubOutlined
+                  className="social_icon"
+                  style={{ color: "#C7C7C7" }}
+                />
+                <GitlabOutlined
+                  className="social_icon"
+                  style={{ color: "#C7C7C7" }}
+                />
+                <InstagramOutlined
+                  style={{ color: "#C7C7C7" }}
+                  onClick={() =>
+                    window.open("https://www.instagram.com/sachinbabu221b/")
+                  }
+                  className="social_icon"
+                />
               </Col>
             </Col>
             <Col

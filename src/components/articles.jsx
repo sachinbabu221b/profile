@@ -9,11 +9,12 @@ const ArticleCard = (props) => {
   return (
     <Card
       hoverable
-      style={{ width: 500 }}
+      style={{ width: 500, borderColor: "#202020" , background: '#202020'}}
       onClick={() => window.open(link)}
       cover={<img alt={altText} src={CrossBrowser} />}
     >
-      <Meta title={title} />
+      {/* <Meta title={title} /> */}
+      <h3 style={{ color: "#808080" }}>{title}</h3>
     </Card>
   );
 };
