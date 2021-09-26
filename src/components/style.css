@@ -141,6 +141,7 @@
   .sub_headings {
     margin-top: 20px;
   }
+  
 }
 @media screen and (max-width: 450px) and (min-width: 200px) {
   .name_heading {

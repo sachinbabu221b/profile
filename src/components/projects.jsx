@@ -7,7 +7,7 @@ const ProjectCard = (props) => {
   const { link, description, title } = props;
   return (
     <Col
-      xs={{ span: 0 }}
+      xs={{ span: 24 }}
       md={{ span: 22 }}
       xl={{ span: 22 }}
       className="mg_top32"
@@ -28,7 +28,7 @@ const Projects = () => {
   return (
     <Fragment>
       <Row>
-        <Col xs={{ span: 0 }} md={{ span: 24 }}>
+        <Col xs={{ span: 24 }} md={{ span: 24 }}>
           <Col span={24} className="company_style mg_top_20">
             PROJECTS
           </Col>

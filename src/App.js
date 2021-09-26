@@ -37,7 +37,7 @@ function App() {
         <Content className="content_style">
           <Row justify="center">
             <Profile />
-            <Col xs={{ span: 0 }} md={{ span: 20 }} lg={{ span: 16 }}>
+            <Col xs={{ span: 20 }} md={{ span: 20 }} lg={{ span: 16 }}>
               <CompanyInfo />
               <Row align="middle">
                 <Col span={24} className="company_info-section">

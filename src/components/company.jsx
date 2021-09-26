@@ -6,7 +6,7 @@ const CompanyInfo = () => {
   return (
     <Fragment>
       <Row align="middle">
-        <Col span={24} className="company_info-section">
+        <Col xs={{ span: 0 }} md={{ span: 24 }} className="company_info-section">
           <Row>
             <Col xs={{ span: 0 }} md={{ span: 11 }}>
               <Col span={24} className="company_style">
