@@ -11,5 +11,5 @@
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
   "workbench.startupEditor": "none",
-  "editor.lineHeight": 28,
+  "editor.lineHeight": 36,
 }

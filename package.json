@@ -1,47 +1,25 @@
 {
-  "homepage": "http://sachinbabu221b.github.io/profile",
-  "name": "my-react-app",
-  "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "antd": "^4.15.5",
-    "react": "^17.0.2",
-    "react-custom-scrollbars": "^4.2.1",
-    "react-dom": "^17.0.2",
-    "react-ga": "^3.3.0",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1"
-  },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "classnames": "2.2.6",
+    "date-fns": "2.16.1",
+    "framer-motion": "^4.1.17",
+    "gray-matter": "4.0.2",
+    "next": "latest",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-thanos-snap-effect": "0.0.4",
+    "remark": "13.0.0",
+    "remark-html": "13.0.1"
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0"
+    "autoprefixer": "^10.2.1",
+    "postcss": "^8.2.4",
+    "tailwindcss": "^2.0.2"
   }
 }
