@@ -1,6 +1,9 @@
 module.exports = {
   purge: ['./components/**/*.js', './pages/**/*.js'],
   theme: {
+    container: {
+      padding: '2rem',
+    },
     extend: {
       colors: {
         'accent-1': '#FAFAFA',

@@ -8,15 +8,6 @@ import Head from "next/head";
 
 export default function Index({ allPosts }) {
   const router = useRouter();
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    router.push(href);
-  };
-  const style = {
-    marginRight: 10,
-    color: "black",
-  };
   return (
     <>
       <Layout>
