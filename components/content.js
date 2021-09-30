@@ -14,10 +14,10 @@ export default function Content() {
       duration: 1.5,
       yoyo: Infinity,
       ease: "easeOut",
-    }
+    },
   };
   return (
-    <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
+    <section className="flex-col md:flex-row flex items-center md: mt-24 mb-24 md:mb-24">
       <motion.div
         key="orange"
         transition={bounceTransition}
@@ -29,12 +29,16 @@ export default function Content() {
         }}
       >
         <Image src={orange} alt="Picture of the author" />
+        {/* <div className="text-2xl  -mt-20       text-center">dfgdfg</div> */}
       </motion.div>
       <motion.div
         key="red"
         transition={bounceTransition}
         animate={{
           y: ["0%", "-10%"],
+        }}
+        whileHover={{
+          scale: 1.5,
         }}
       >
         <Image src={red} alt="Picture of the author" />
@@ -45,14 +49,21 @@ export default function Content() {
         animate={{
           y: ["0%", "-10%"],
         }}
+        whileHover={{
+          scale: 1.5,
+        }}
       >
         <Image src={blue} alt="Picture of the author" />
       </motion.div>
+
       <motion.div
         key="violet"
         transition={bounceTransition}
         animate={{
           y: ["0%", "-10%"],
+        }}
+        whileHover={{
+          scale: 1.5,
         }}
       >
         <Image src={violet} alt="Picture of the author" />
@@ -63,6 +74,9 @@ export default function Content() {
         animate={{
           y: ["0%", "-10%"],
         }}
+        whileHover={{
+          scale: 1.5,
+        }}
       >
         <Image src={green} alt="Picture of the author" />
       </motion.div>
@@ -71,6 +85,9 @@ export default function Content() {
         transition={bounceTransition}
         animate={{
           y: ["0%", "-10%"],
+        }}
+        whileHover={{
+          scale: 1.5,
         }}
       >
         <Image src={yellow} alt="Picture of the author" />

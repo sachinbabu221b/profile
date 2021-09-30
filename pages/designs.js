@@ -6,7 +6,7 @@ import Content from "../components/content";
 
 import Head from "next/head";
 
-export default function PageNew() {
+export default function Designs() {
   const router = useRouter();
   return (
     <>
@@ -15,9 +15,8 @@ export default function PageNew() {
           <title>Sachin</title>
         </Head>
         <Container>
-          <Intro />
           <img
-            src="https://doodleipsum.com/200/hand-drawn?i=8a0019965b55aaea398f600a4837f637"
+            src="https://doodleipsum.com/500/outline?i=e6825b4baaeba4c51f770a974200273b"
             alt="Picture of the author"
           />
           <div>

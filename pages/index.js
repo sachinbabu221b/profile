@@ -2,6 +2,9 @@ import Container from "../components/container";
 import Intro from "../components/intro";
 import Layout from "../components/layout";
 import Content from "../components/content";
+import Header from "../components/header";
+
+
 import { useRouter } from "next/router";
 
 import Head from "next/head";
