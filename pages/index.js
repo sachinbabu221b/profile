@@ -18,13 +18,6 @@ export default function Index({ allPosts }) {
           <title>Sachin</title>
         </Head>
         <Container>
-          <button
-            type="button"
-            className="p-2 ring-1 ring-offset-blue-900"
-            onClick={() => router.push("/pagenew")}
-          >
-            Click me
-          </button>
           <Intro />
           <Content />
         </Container>

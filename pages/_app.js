@@ -1,17 +1,18 @@
 import "../styles/index.css";
 import { AnimatePresence, motion } from "framer-motion";
+import { Scrollbars } from "react-custom-scrollbars";
 
 export default function MyApp({ Component, pageProps, router }) {
   const variants = {
     hidden: { opacity: 0, x: -200, y: 0 },
     enter: { opacity: 1, x: 0, y: 0 },
     exit: { opacity: 0, x: 0, y: -100 },
-}
+  };
   return (
     <AnimatePresence
-    exitBeforeEnter
-    initial={false}
-    onExitComplete={() => window.scrollTo(0, 0)}
+      exitBeforeEnter
+      initial={false}
+      onExitComplete={() => window.scrollTo(0, 0)}
     >
       <motion.div
         key={router.route}
@@ -19,9 +20,15 @@ export default function MyApp({ Component, pageProps, router }) {
         animate="enter"
         exit="exit"
         variants={variants}
-        transition={{ type: 'linear' }}
+        transition={{ type: "linear" }}
       >
-        <Component {...pageProps} />
+        <Scrollbars
+          style={{ width: "100%", height: "100vh" }}
+          autoHide
+          universal={true}
+        >
+          <Component {...pageProps} />
+        </Scrollbars>
       </motion.div>
     </AnimatePresence>
   );
