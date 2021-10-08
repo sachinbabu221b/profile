@@ -27,12 +27,15 @@ function Index({ stars }) {
       <Layout>
         <Head>
           <title>Sachin</title>
-
+          <script
+            src="https://kit.fontawesome.com/ac46f1394d.js"
+            crossorigin="anonymous"
+          ></script>
           <script src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
         </Head>
-        <Container>
+        <Container >
           <Content />
-          <button
+          {/* <button
             aria-label="Toggle Dark Mode"
             type="button"
             className="w-10 h-10 p-3 rounded focus:outline-none"
@@ -40,7 +43,7 @@ function Index({ stars }) {
           >
             Dark
           </button>
-          <Intro />
+          <Intro /> */}
           {/* <section>
             Tech stack
             <Image src={techStack} alt="Picture of the author" />
@@ -48,6 +51,7 @@ function Index({ stars }) {
           <div id="techSection">
             <Image src="https://doodleipsum.com/200?i=41f017cf42bb4f905a48613ec87b613b" />
           </div> */}
+     
         </Container>
       </Layout>
     </>

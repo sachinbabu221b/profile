@@ -4,6 +4,7 @@ module.exports = {
     container: {
       padding: '2rem',
     },
+    
     extend: {
       colors: {
         'accent-1': '#FAFAFA',
@@ -12,7 +13,9 @@ module.exports = {
         success: '#0070f3',
         cyan: '#79FFE1',
       },
-
+      fontFamily: {
+        nunito: ['Nunito'],
+      },
       backgroundImage: {
         'linkedin': "url('/linkedInWall.png')",
     },

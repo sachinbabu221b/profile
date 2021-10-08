@@ -1,6 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
+import Image from "next/image";
 
 import {
   BookmarkAltIcon,
@@ -18,7 +19,7 @@ import {
 } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
-
+import logo from "../public/assets/logo.png";
 const solutions = [
   {
     name: "Works",
@@ -56,11 +57,12 @@ export default function Header() {
         <div className="flex justify-between items-center  py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a onClick={() => router.push("/")}>
-              <img
+              {/* <img
                 className="h-8 w-auto sm:h-10"
                 src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                 alt=""
-              />
+              /> */}
+              <Image src={logo} width="36px" height="36px" />
             </a>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
@@ -69,6 +71,14 @@ export default function Header() {
             </Popover.Button>
           </div>
           <Popover.Group as="nav" className="hidden md:flex space-x-10">
+            <a
+              onClick={() => {
+                router.push("/");
+              }}
+              className="focus:underline text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
+            >
+              Home
+            </a>
             <a
               onClick={() => router.push("/works")}
               className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
