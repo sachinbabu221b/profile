@@ -12,6 +12,10 @@ module.exports = {
         success: '#0070f3',
         cyan: '#79FFE1',
       },
+
+      backgroundImage: {
+        'linkedin': "url('/linkedInWall.png')",
+    },
       spacing: {
         28: '7rem',
       },

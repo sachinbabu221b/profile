@@ -1,6 +1,9 @@
 import "../styles/index.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { Scrollbars } from "react-custom-scrollbars";
+// import {ParticlesContainer} from '../components/particle'
+import { ThemeProvider } from "next-themes";
+import Particles from 'react-particles-js';
 
 export default function MyApp({ Component, pageProps, router }) {
   const variants = {
@@ -9,6 +12,9 @@ export default function MyApp({ Component, pageProps, router }) {
     exit: { opacity: 0, x: 0, y: -100 },
   };
   return (
+    // <ParticlesContainer>
+    <ThemeProvider defaultTheme="light" attribute="class">
+ 
     <AnimatePresence
       exitBeforeEnter
       initial={false}
@@ -30,6 +36,8 @@ export default function MyApp({ Component, pageProps, router }) {
           <Component {...pageProps} />
         </Scrollbars>
       </motion.div>
-    </AnimatePresence>
+      </AnimatePresence>
+      </ThemeProvider>
+
   );
 }
