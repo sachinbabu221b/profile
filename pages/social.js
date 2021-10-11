@@ -46,7 +46,7 @@ export default function Works() {
 
         <Gallery photos={PHOTO_SET} columns={3} direction="row" />
         
-        <iframe style={{ border: "1px solid rgba(0, 0, 0, 0.1)"}} width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FDYU1CGwAO8vfrlCJbMEYkI%2FE-commerce-Design-Workshop%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+       
       </Layout>
     </>
   );

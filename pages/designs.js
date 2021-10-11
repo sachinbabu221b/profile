@@ -7,7 +7,7 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import Head from "next/head";
 import Parser from "rss-parser";
-import Particles from 'react-particles-js';
+import Particles from "react-particles-js";
 
 // import {ParticlesContainer} from '../components/particle'
 const parser = new Parser();
@@ -28,48 +28,50 @@ function Designs() {
   //     }
   //   }
   //   getMediumFeed();
-      
+
   // }, []);
 
   return (
     <>
-
-    <Layout>
+      <Layout>
         <Head>
           <title>Sachin</title>
         </Head>
         <Container>
-          <div >
-       
-  </div>
-          <Intro />
-          <img
-            src="https://doodleipsum.com/200/hand-drawn?i=8a0019965b55aaea398f600a4837f637"
-            alt="Picture of the author"
-          />
+          {/* <Intro /> */}
 
-          <div className="grid grid-cols-3  mb-10 bg-gray-300">
-            <div className="col-span-3  max-h-screen bg-cover  bg-no-repeat bg-linkedin h-72 pt-56  pl-16 text-6xl font-medium">
-              Sachin Babu
+          <div className="grid grid-cols-3 mb-16 mt-4">
+            <div className="col-span-3 text-7xl text-left font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-nunito">
+              Designs
             </div>
-            <div className="col-span-3">Mind stone</div>
+            {/* <div className="col-span-3 text-2xl text-left  font-nunito">
+              Designs in figma
+            </div> */}
+            <div className="col-span-3">
+              <iframe
+                style={{
+                  border: "1px solid rgba(0, 0, 0, 0.1)",
+                  height: "100vh",
+                  width: "80vw",
+                  borderRadius: '20px',
+                  background: '#cacaca'
+                }}
+                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FDYU1CGwAO8vfrlCJbMEYkI%2FE-commerce-Design-Workshop%3Fnode-id%3D0%253A1"
+                allowfullscreen
+              ></iframe>
+            </div>
           </div>
         </Container>
-        </Layout>
-            
+      </Layout>
 
-
-
-     
       {/* <ParticlesContainer> */}
-     
-        {/* </ParticlesContainer> */}
 
+      {/* </ParticlesContainer> */}
     </>
   );
 }
-// Designs.getInitialProps = 
-  
+// Designs.getInitialProps =
+
 //   async function() {
 //     // fetch('https://api.tvmaze.com/search/shows?q=batman')
 //     // const data = await res.json()
@@ -81,4 +83,4 @@ function Designs() {
 //   //   data: data
 //   // }
 // }
-export default  Designs
+export default Designs;
