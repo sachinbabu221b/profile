@@ -25,14 +25,7 @@ function Index({ stars }) {
   return (
     <>
       <Layout>
-        <Head>
-          <title>Sachin</title>
-          <script
-            src="https://kit.fontawesome.com/ac46f1394d.js"
-            crossorigin="anonymous"
-          ></script>
-          <script src="https://www.twilik.com/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
-        </Head>
+
         <Container >
           <Content />
           {/* <button

@@ -15,6 +15,7 @@ module.exports = {
       },
       fontFamily: {
         nunito: ['Nunito'],
+        itim: ['Itim'],
       },
       backgroundImage: {
         'linkedin': "url('/linkedInWall.png')",

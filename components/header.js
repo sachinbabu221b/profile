@@ -75,7 +75,8 @@ export default function Header() {
               onClick={() => {
                 router.push("/");
               }}
-              className="focus:underline text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
+              data-controller="tabs" data-tabs-index="1"
+              className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
             >
               Home
             </a>
@@ -102,6 +103,12 @@ export default function Header() {
               className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
             >
               Contact
+            </a>
+            <a
+              onClick={() => router.push("/social")}
+              className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
+            >
+              social
             </a>
           </Popover.Group>
         </div>

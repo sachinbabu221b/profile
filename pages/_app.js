@@ -14,7 +14,7 @@ export default function MyApp({ Component, pageProps, router }) {
   return (
     // <ParticlesContainer>
     <ThemeProvider defaultTheme="light" attribute="class">
- 
+
     <AnimatePresence
       exitBeforeEnter
       initial={false}
