@@ -19,11 +19,9 @@ export default function Works() {
           <div className="col-span-4 p-3 text-7xl font-bold leading-normal mt-0 text-indigo-800">
             Works
             <div className="text-base font-normal leading-relaxed text-indigo-800">
-            A selection of projects I've worked on, during my career as a software developer.
-          </div>
-          </div>
-          <div className=" p-3 rounded">
-            <Cards />
+              A selection of projects I've worked on, during my career as a
+              software developer.
+            </div>
           </div>
           <div className=" p-3 rounded">
             <Cards />
@@ -46,7 +44,9 @@ export default function Works() {
           <div className=" p-3 rounded">
             <Cards />
           </div>
-
+          <div className=" p-3 rounded">
+            <Cards />
+          </div>
         </div>
 
         {/* <div className="bg-blue-400 min-h-screen flex items-center justify-center">

@@ -6,11 +6,9 @@ import Content from "../components/content";
 import React, { useEffect } from "react";
 import axios from "axios";
 import Head from "next/head";
-import Parser from "rss-parser";
 import Particles from "react-particles-js";
 
 // import {ParticlesContainer} from '../components/particle'
-const parser = new Parser();
 function Designs() {
   const router = useRouter();
   // useEffect(() => {
@@ -46,7 +44,7 @@ function Designs() {
             </div>
             {/* <div className="col-span-3 text-2xl text-left  font-nunito">
               Designs in figma
-            </div> */}
+            </div> */} 
             <div className="col-span-3">
               <iframe
                 style={{

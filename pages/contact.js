@@ -5,13 +5,10 @@ import Layout from "../components/layout";
 import Content from "../components/content";
 import contactIllustration from "../public/assets/contact.png";
 import Image from "next/image";
-import ScrollAnimation from "react-animate-on-scroll";
-import Aos from "aos";
+
 import Head from "next/head";
 import React, { useEffect } from "react";
-import "aos/dist/aos.css";
 import MapChart from "../components/map";
-import { stamenToner } from "pigeon-maps/providers";
 import {
   ComposableMap,
   Geographies,
@@ -20,7 +17,13 @@ import {
 } from "react-simple-maps";
 
 import india from "../public/assets/india.json";
-
+import {
+  AiOutlineLinkedin,
+  AiOutlineMail,
+  AiOutlineMedium,
+  AiOutlineWhatsApp,
+  AiOutlineInstagram,
+} from "react-icons/ai";
 const PROJECTION_CONFIG = {
   scale: 1000,
   center: [78.9629, 22.5937],
@@ -50,33 +53,34 @@ export default function Contact() {
           <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
         </Head>
         <Container>
-          <div className="grid grid-cols-2 gap-2 -mt-24 ml-10 mb-10 ">
-            <div className=" p-3 rounded font-bold text-3xl mb-2 font-nunito text-center">
-              <Image src={contactIllustration} />
-              <div>
-                What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-                printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an
-                unknown printer took a galley of type and scrambled it to make a
-                type specimen book. It has survived not only five centuries, but
-                also the leap into electronic typesetting, remaining essentially
-                unchanged. It was popularised in the 1960s with the release of
-                Letraset sheets containing Lorem Ip
+          <div className="grid grid-cols-2  ml-10 mb-10 ">
+            <div className=" p-3 text-7xl text-left font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-nunito">
+              Contact
+              <div className="grid grid-cols-6">
+                <span className="">
+                  <AiOutlineLinkedin size={40} className="text-black" />
+                </span>
+                <span className="">
+                  <AiOutlineMail size={40} className="text-black" />
+                </span>
+                <span>
+                  <AiOutlineMedium size={40} className="text-black" />
+                </span>
+                <span>
+                  <AiOutlineInstagram size={40} className="text-black" />
+                </span>
+                <span>
+                  <AiOutlineWhatsApp size={40} className="text-black" />
+                </span>
+                {/* <div className=" p-3  text-white rounded font-bold mb-2 font-nunito  text-2xl text-white  tracking-tighter leading-tight">
+              <Image src={linkedin} alt="Picture of the author" width="40px" height="40px"/>
+              </div> */}
               </div>
             </div>
-            <div className="p-10">
+            {/* <div className="p-10 h-full">
               <MapChart />
-            </div>
+            </div> */}
           </div>
-          <button
-            className="p-2 ring-1 ring-offset-blue-900"
-            type="button"
-            onClick={() => router.push("/")}
-          >
-            Click me
-          </button>
-
-          {/* <Content /> */}
         </Container>
       </Layout>
     </>

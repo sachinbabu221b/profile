@@ -1,56 +1,32 @@
-import Footer from "../components/footer";
-import Header from "../components/header";
 import Particles from "react-particles-js";
-import { ParallaxProvider } from "react-scroll-parallax";
+import { motion } from "framer-motion";
 
 import Meta from "../components/meta";
 import Head from "next/head";
 
 export default function Layout({ preview, children }) {
+  const variants = {
+    hidden: { opacity: 0, x: -200, y: 0 },
+    enter: { opacity: 1, x: 0, y: 0 },
+    exit: { opacity: 0, x: 0, y: -100 },
+  };
   return (
     <>
-        <Head>
+      <Head>
         <title>Sachin</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
           href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,800;1,900&display=swap"
           rel="stylesheet"
         />
-        <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet"/>
-        <script src="https://www.retainable.io/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Itim&display=swap"
+          rel="stylesheet"
+        />
       </Head>
-      <div class="min-h-screen flex items-center justify-center">
-        <div class="relative w-full h-full">
-          {/* <div
-            style={{
-              position: "absolute",
-              borderRadius: "50%",
-
-              width: "30%",
-              height: "500px",
-
-              left: "22%",
-              top: "-154px",
-              zIndex: 1,
-              background: "#F088C4",
-              filter: "blur(100px)",
-            }}
-          ></div>
-          <div
-            style={{
-              position: "absolute",
-              borderRadius: "50%",
-
-              width: "30%",
-              height: "500px",
-              left: "45%",
-              top: "-154px",
-              zIndex: 1,
-              background: "#FFB066",
-              filter: "blur(100px)",
-            }}
-          ></div> */}
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="relative w-full h-full">
           <Particles
             className="absolute z-0 w-full h-full"
             params={{
@@ -113,13 +89,19 @@ export default function Layout({ preview, children }) {
             }}
           />
 
-          <div class="relative">
-            <Header />
+          <div className="relative">
             <Meta />
             <div className="min-h-screen">
-              <main>{children}</main>
+              <motion.main
+                initial="hidden"
+                animate="enter"
+                exit="exit"
+                variants={variants}
+                transition={{ type: "linear" }}
+              >
+                {children}
+              </motion.main>
             </div>
-            <Footer />
           </div>
         </div>
       </div>

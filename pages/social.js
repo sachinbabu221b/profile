@@ -43,10 +43,7 @@ export default function Works() {
         <Head>
           <title>Sachin</title>
         </Head>
-
         <Gallery photos={PHOTO_SET} columns={3} direction="row" />
-        
-       
       </Layout>
     </>
   );

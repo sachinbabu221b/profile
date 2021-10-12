@@ -13,3 +13,9 @@
 /* Stop purging. */
 
 /* Your own custom utilities */
+.navigation-underline {
+  @apply w-full border border-indigo-500;
+}
+body {
+  overflow: hidden;
+}

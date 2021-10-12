@@ -2,6 +2,7 @@
 import { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import Image from "next/image";
+import { isActiveLink } from "../lib/utils";
 
 import {
   BookmarkAltIcon,
@@ -20,6 +21,8 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
 import logo from "../public/assets/logo.png";
+import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
+
 const solutions = [
   {
     name: "Works",
@@ -51,67 +54,121 @@ const solutions = [
 export default function Header() {
   const router = useRouter();
 
+  console.log(`router.pathname`, router.pathname);
   return (
     <Popover className="sticky top-0 z-50 bg-white">
       <div className="max-w-8xl mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center  py-6 md:justify-start md:space-x-10">
-          <div className="flex justify-start lg:w-0 lg:flex-1">
-            <a onClick={() => router.push("/")}>
-              {/* <img
-                className="h-8 w-auto sm:h-10"
-                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                alt=""
-              /> */}
-              <Image src={logo} width="36px" height="36px" />
-            </a>
+        <AnimateSharedLayout>
+          <div className="flex justify-between items-center  py-4 md:justify-start md:space-x-10 ">
+            <div className="flex justify-start lg:w-0 lg:flex-1">
+              <a onClick={() => router.push("/")}>
+                <Image src={logo} width="36px" height="36px" />
+              </a>
+            </div>
+            <div className="-mr-2 -my-2 md:hidden">
+              <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <MenuIcon className="h-6 w-6" aria-hidden="true" />
+              </Popover.Button>
+            </div>
+            <Popover.Group as="nav" className="hidden md:flex space-x-10">
+              <span>
+                <a
+                  onClick={() => {
+                    router.push("/");
+                  }}
+                  data-controller="tabs"
+                  data-tabs-index="1"
+                  className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
+                >
+                  Home
+                </a>
+
+                {isActiveLink("/", router.pathname) && (
+                  <motion.div
+                    layoutId="navigation-underline"
+                    className="navigation-underline"
+                    animate
+                  />
+                )}
+              </span>
+              <span>
+                <a
+                  onClick={() => router.push("/works")}
+                  className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
+                >
+                  Works
+                </a>
+                {isActiveLink("/works", router.pathname) && (
+                  <motion.div
+                    layoutId="navigation-underline"
+                    className="navigation-underline"
+                    animate
+                  />
+                )}
+              </span>
+              <span>
+                <a
+                  onClick={() => router.push("/designs")}
+                  className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
+                >
+                  Design
+                </a>
+                {isActiveLink("/designs", router.pathname) && (
+                  <motion.div
+                    layoutId="navigation-underline"
+                    className="navigation-underline"
+                    animate
+                  />
+                )}
+              </span>
+              <span>
+                <a
+                  onClick={() => router.push("/blogs")}
+                  className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
+                >
+                  Blogs
+                </a>
+                {isActiveLink("/blogs", router.pathname) && (
+                  <motion.div
+                    layoutId="navigation-underline"
+                    className="navigation-underline"
+                    animate
+                  />
+                )}
+              </span>
+              <span>
+                <a
+                  onClick={() => router.push("/contact")}
+                  className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
+                >
+                  Contact
+                </a>
+                {isActiveLink("/contact", router.pathname) && (
+                  <motion.div
+                    layoutId="navigation-underline"
+                    className="navigation-underline"
+                    animate
+                  />
+                )}
+              </span>
+              <span>
+                <a
+                  onClick={() => router.push("/social")}
+                  className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
+                >
+                  Social
+                </a>
+                {isActiveLink("/social", router.pathname) && (
+                  <motion.div
+                    layoutId="navigation-underline"
+                    className="navigation-underline"
+                    animate
+                  />
+                )}
+              </span>
+            </Popover.Group>
           </div>
-          <div className="-mr-2 -my-2 md:hidden">
-            <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-              <MenuIcon className="h-6 w-6" aria-hidden="true" />
-            </Popover.Button>
-          </div>
-          <Popover.Group as="nav" className="hidden md:flex space-x-10">
-            <a
-              onClick={() => {
-                router.push("/");
-              }}
-              data-controller="tabs" data-tabs-index="1"
-              className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
-            >
-              Home
-            </a>
-            <a
-              onClick={() => router.push("/works")}
-              className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
-            >
-              Works
-            </a>
-            <a
-              onClick={() => router.push("/designs")}
-              className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
-            >
-              Design
-            </a>
-            <a
-              onClick={() => router.push("/blogs")}
-              className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
-            >
-              Blogs
-            </a>
-            <a
-              onClick={() => router.push("/contact")}
-              className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
-            >
-              Contact
-            </a>
-            <a
-              onClick={() => router.push("/social")}
-              className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
-            >
-              social
-            </a>
-          </Popover.Group>
-        </div>
+        </AnimateSharedLayout>
       </div>
 
       <Transition

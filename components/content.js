@@ -16,6 +16,7 @@ import blog from "../public/assets/blog.json";
 import design from "../public/assets/designs.json";
 import arrow from "../public/assets/up-arrow.png";
 import { AiFillUpCircle } from "react-icons/ai";
+import uniqid from "uniqid";
 
 function Content() {
   const bounceTransition = {
@@ -59,32 +60,11 @@ function Content() {
     },
   };
 
-  
   return (
-    <AnimatePresence>
-      <Head>
-        <title>Sachin</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600;1,800;1,900&display=swap"
-          rel="stylesheet"
-        />
-        <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet"/>
-        <script src="https://www.retainable.io/assets/retainable/rss-embed/retainable-rss-embed.js"></script>
-      </Head>
+    <AnimatePresence key={uniqid()}>
       <>
-        <div className="grid grid-cols-6 ml-10 gap-y-16 mb-10" id="top">
-          <div className="col-span-6 text-9xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-itim">
-            {/* <motion.h3
-        style={{ width: 50, height: 50, fontSize: 50 }}
-        animate={{
-          color: ["#000", "#ff2323", "#000", "#044",]
-        }}
-        transition={{ duration: 4, repeat: Infinity }}
-      >
-        Text
-            </motion.h3> */}
+        <div className="grid grid-cols-6 ml-10 gap-y-16  mb-10" id="tops">
+          <div className="col-span-6 text-9xl font-extrabold text-transparent pb-3 bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-itim">
             Explore my <br />
             infinity stone
           </div>
@@ -230,7 +210,7 @@ function Content() {
               software developer.
             </div>
             <button
-              class="text-indigo-500 mt-20 bg-transparent border border-solid border-indigo-500 hover:bg-indigo-500 hover:text-white active:bg-indigo-600 font-bold uppercase px-8 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+              className="text-indigo-500 mt-20 bg-transparent border border-solid border-indigo-500 hover:bg-indigo-500 hover:text-white active:bg-indigo-600 font-bold uppercase px-8 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
               type="button"
             >
               View More
@@ -254,7 +234,7 @@ function Content() {
               software developer.
             </div>
             <button
-              class="text-indigo-500 mt-20 bg-transparent border border-solid border-indigo-500 hover:bg-indigo-500 hover:text-white active:bg-indigo-600 font-bold uppercase px-8 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+              className="text-indigo-500 mt-20 bg-transparent border border-solid border-indigo-500 hover:bg-indigo-500 hover:text-white active:bg-indigo-600 font-bold uppercase px-8 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
               type="button"
             >
               View More
@@ -271,7 +251,7 @@ function Content() {
               software developer.
             </div>
             <button
-              class="text-indigo-500 mt-20 bg-transparent border border-solid border-indigo-500 hover:bg-indigo-500 hover:text-white active:bg-indigo-600 font-bold uppercase px-8 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+              className="text-indigo-500 mt-20 bg-transparent border border-solid border-indigo-500 hover:bg-indigo-500 hover:text-white active:bg-indigo-600 font-bold uppercase px-8 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
               type="button"
             >
               View More
@@ -295,25 +275,22 @@ function Content() {
               software developer.
             </div>
             <button
-              class="text-indigo-500 mt-20 bg-transparent border border-solid border-indigo-500 hover:bg-indigo-500 hover:text-white active:bg-indigo-600 font-bold uppercase px-8 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+              className="text-indigo-500 mt-20 bg-transparent border border-solid border-indigo-500 hover:bg-indigo-500 hover:text-white active:bg-indigo-600 font-bold uppercase px-8 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
               type="button"
             >
               View More
             </button>
           </div>
         </div>
-        <button
+        {/* <button
             className="fixed bottom-24 right-10 bg-none ease-linear transition-all duration-150"
             type="button"
             onClick={() => {
-              document
-                .getElementById("top")
-                .scrollIntoView({ block: "start", behavior: "smooth" });
+              scroll(0,0);
             }}
         >
           <AiFillUpCircle size={50}/>
-            {/* <Image src={arrow} height="20px" width="20px"></Image> */}
-          </button>
+          </button> */}
       </>
     </AnimatePresence>
   );
