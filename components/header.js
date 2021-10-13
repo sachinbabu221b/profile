@@ -22,6 +22,7 @@ import { ChevronDownIcon } from "@heroicons/react/solid";
 import { useRouter } from "next/router";
 import logo from "../public/assets/logo.png";
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
+import { AiFillHome } from "react-icons/ai";
 
 const solutions = [
   {
@@ -62,7 +63,7 @@ export default function Header() {
           <div className="flex justify-between items-center  py-4 md:justify-start md:space-x-10 ">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <a onClick={() => router.push("/")}>
-                <Image src={logo} width="42px" height="42px" />
+                <Image src={logo} width="48px" height="48px" />
               </a>
             </div>
             <div className="-mr-2 -my-2 md:hidden">
@@ -70,7 +71,7 @@ export default function Header() {
                 <MenuIcon className="h-6 w-6" aria-hidden="true" />
               </Popover.Button>
             </div>
-            <Popover.Group as="nav" className="hidden md:flex space-x-10">
+            <Popover.Group as="nav" className="hidden md:flex space-x-8">
               <span>
                 <a
                   onClick={() => {
@@ -78,9 +79,8 @@ export default function Header() {
                   }}
                   data-controller="tabs"
                   data-tabs-index="1"
-                  className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
                 >
-                  Home
+                  <AiFillHome className=" text-base font-medium text-gray-500 hover:text-gray-900 text-2xl cursor-pointer" />
                 </a>
 
                 {isActiveLink("/", router.pathname) && (
@@ -108,12 +108,12 @@ export default function Header() {
               </span>
               <span>
                 <a
-                  onClick={() => router.push("/designs")}
+                  onClick={() => router.push("/tech")}
                   className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
                 >
-                  Design
+                  Tech stack
                 </a>
-                {isActiveLink("/designs", router.pathname) && (
+                {isActiveLink("/tech", router.pathname) && (
                   <motion.div
                     layoutId="navigation-underline"
                     className="navigation-underline"
@@ -138,12 +138,12 @@ export default function Header() {
               </span>
               <span>
                 <a
-                  onClick={() => router.push("/contact")}
+                  onClick={() => router.push("/designs")}
                   className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
                 >
-                  Contact
+                  Design
                 </a>
-                {isActiveLink("/contact", router.pathname) && (
+                {isActiveLink("/designs", router.pathname) && (
                   <motion.div
                     layoutId="navigation-underline"
                     className="navigation-underline"
@@ -151,14 +151,15 @@ export default function Header() {
                   />
                 )}
               </span>
+
               <span>
                 <a
-                  onClick={() => router.push("/social")}
+                  onClick={() => router.push("/contact")}
                   className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
                 >
-                  Social
+                  Contact
                 </a>
-                {isActiveLink("/social", router.pathname) && (
+                {isActiveLink("/contact", router.pathname) && (
                   <motion.div
                     layoutId="navigation-underline"
                     className="navigation-underline"

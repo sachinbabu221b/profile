@@ -16,8 +16,6 @@ import {
   AiOutlineInstagram,
 } from "react-icons/ai";
 
-import Image from "next/image";
-
 export default function Footer() {
   const defaultOptions = {
     loop: true,
@@ -32,44 +30,87 @@ export default function Footer() {
     <footer className="bg-black border-t border-accent-2">
       <Container>
         <div className="grid grid-cols-3 gap-2">
-          <div className=" p-3  rounded font-bold text-3xl mb-2 font-nunito text-center">
-            <Lottie options={defaultOptions} height={400} width={400} />
-          </div>
-          <div className=" p-3   col-span-2 rounded font-bold mb-2 font-nunito  text-8xl text-white font-extrabold tracking-tighter leading-tight">
+          <div className=" p-3   col-span-2 rounded  mb-2 font-itim  text-8xl text-white font-extrabold tracking-tighter leading-tight">
             Buy me a beer.
-            <div className="grid grid-cols-6">
-              <span className="">
-                <AiOutlineLinkedin size={40} />
-              </span>
-              <span className="">
-                <AiOutlineMail size={40} />
-              </span>
-              <span>
-                <AiOutlineMedium size={40} />
-              </span>
-              <span>
-                <AiOutlineInstagram size={40} />
-              </span>
-              <span>
-                <AiOutlineWhatsApp size={40} />
-              </span>
-              {/* <div className=" p-3  text-white rounded font-bold mb-2 font-nunito  text-2xl text-white  tracking-tighter leading-tight">
-              <Image src={linkedin} alt="Picture of the author" width="40px" height="40px"/>
-              </div> */}
+            <div class="flex flex-row mt-4">
+              <div
+                className="mr-4"
+                onClick={() =>
+                  window
+                    .open(
+                      "https://www.linkedin.com/in/sachin-babu-69a93b177/",
+                      "_blank"
+                    )
+                    .focus()
+                }
+              >
+                <AiOutlineLinkedin size={42} />
+              </div>
+              <div className="mr-4">
+                <AiOutlineMail
+                  size={42}
+                  onClick={() =>
+                    window
+                      .open("mailto:sachinbabu6174@gmail.com", "_blank")
+                      .focus()
+                  }
+                />
+              </div>
+              <div className="mr-4">
+                <AiOutlineMedium
+                  size={42}
+                  onClick={() =>
+                    window
+                      .open("https://sachinbabu6174.medium.com/", "_blank")
+                      .focus()
+                  }
+                />
+              </div>
+              <div className="mr-4">
+                <AiOutlineInstagram
+                  size={42}
+                  onClick={() =>
+                    window
+                      .open(
+                        "https://www.instagram.com/sachinbabu221b/",
+                        "_blank"
+                      )
+                      .focus()
+                  }
+                />
+              </div>
+              <div>
+                <AiOutlineWhatsApp
+                  size={42}
+                  onClick={() =>
+                    window
+                      .open(
+                        "https://wa.me/8281163920?text=Hi%20Sachin",
+                        "_blank"
+                      )
+                      .focus()
+                  }
+                />
+              </div>
             </div>
-            <div
-              className="grid grid-cols-1 text-2xl text-white font-normal mt-8 tracking-tighter leading-tight"
-              onClick={() => {
-                window.open(
-                  "https://drive.google.com/file/d/1i-4nTrUiE3o7iXMcFCol7Rv3i1xLrKat/view?usp=sharing"
-                );
-              }}
-            >
-              Download my resume
+            <div className="grid grid-cols-1 text-xl text-white font-normal mt-48 tracking-tighter leading-tight font-itim">
+              <div class="flex flex-row ">
+                <div
+                  className="mr-8"
+                  onClick={() => {
+                    window.open(
+                      "https://drive.google.com/file/d/1i-4nTrUiE3o7iXMcFCol7Rv3i1xLrKat/view?usp=sharing"
+                    );
+                  }}
+                >
+                  Download my resume
+                </div>
+                <div>Handcrafted by me</div>
+              </div>
             </div>
-            <div className="grid grid-cols-1 text-2xl text-white font-normal mt-8 tracking-tighter leading-tight">
-              Handcrafted by me
-            </div>
+          </div>
+          <div className=" p-3  rounded font-bold text-3xl mb-20 font-nunito text-center">
+            <Lottie options={defaultOptions} height={400} width={400} />
           </div>
         </div>
       </Container>

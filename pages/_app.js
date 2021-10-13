@@ -10,16 +10,12 @@ export default function MyApp({ Component, pageProps, router }) {
     <>
       <ThemeProvider defaultTheme="light" attribute="class">
         <Header />
-
         <AnimatePresence
           exitBeforeEnter
           initial={false}
           onExitComplete={() => window.scrollTo(0, 0)}
         >
-       
-            <Component {...pageProps} key={router.route} />
-       
-          {/* </Scrollbars> */}
+          <Component {...pageProps} key={router.route} />
         </AnimatePresence>
       </ThemeProvider>
     </>

@@ -16,7 +16,7 @@ export default function Works() {
         <Container>
           <div className="grid grid-cols-4 gap-2 ml-10 gap-y-10 mb-10">
             <div className="col-span-4 text-7xl text-left font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-nunito">
-              Works
+              Tech Stack
             </div>
 
             <div className=" p-3 rounded">
