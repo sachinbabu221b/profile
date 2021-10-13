@@ -1,7 +1,5 @@
 import { AnimatePresence } from "framer-motion";
-import { Scrollbars } from "react-custom-scrollbars";
 import { ThemeProvider } from "next-themes";
-import Footer from "../components/footer";
 import Header from "../components/header";
 import "../styles/index.css";
 

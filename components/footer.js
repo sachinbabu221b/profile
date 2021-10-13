@@ -1,13 +1,6 @@
 import Container from "./container";
-
-import contactIllustration from "../public/assets/contact.png";
 import Lottie from "react-lottie";
 import animationData from "../public/assets/beer.json";
-import linkedin from "../public/assets/linkedin.png";
-import instagram from "../public/assets/instagram.png";
-import mail from "../public/assets/gmail.png";
-import medium from "../public/assets/medium.png";
-import whatsapp from "../public/assets/whatsapp.png";
 import {
   AiOutlineLinkedin,
   AiOutlineMail,

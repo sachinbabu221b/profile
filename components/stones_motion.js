@@ -1,10 +1,9 @@
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Layout(props) {
-  const { keys, transitionOptions, idToScroll, imageSrc, imageAlt, imageSize } =
-    props;
+  const { keys, transitionOptions, idToScroll, imageSrc, imageAlt } = props;
   return (
     <motion.div
       key={keys}

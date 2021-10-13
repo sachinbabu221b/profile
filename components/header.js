@@ -29,33 +29,38 @@ const solutions = [
     name: "Works",
     description:
       "Get a better understanding of where your traffic is coming from.",
-    href: "/pagenew",
+    href: "/works",
+    icon: ChartBarIcon,
+  },
+  {
+    name: "Tech Stack",
+    description:
+      "Get a better understanding of where your traffic is coming from.",
+    href: "/tech",
     icon: ChartBarIcon,
   },
   {
     name: "Blogs",
     description: "Speak directly to your customers in a more meaningful way.",
-    href: "#",
+    href: "/blogs",
     icon: CursorClickIcon,
   },
   {
     name: "Design",
     description: "Your customers' data will be safe and secure.",
-    href: "#",
+    href: "/designs",
     icon: ShieldCheckIcon,
   },
   {
     name: "Contact",
     description: "Your customers' data will be safe and secure.",
-    href: "#",
+    href: "/contact",
     icon: ShieldCheckIcon,
   },
 ];
 
 export default function Header() {
   const router = useRouter();
-
-  console.log(`router.pathname`, router.pathname);
   return (
     <Popover className="sticky top-0 z-50 bg-white">
       <div className="max-w-8xl mx-auto px-4 sm:px-6">
@@ -189,11 +194,7 @@ export default function Header() {
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
                 <div>
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                    alt="Workflow"
-                  />
+                  <Image src={logo} width="48px" height="48px" />
                 </div>
                 <div className="-mr-2">
                   <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">

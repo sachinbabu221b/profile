@@ -2,7 +2,6 @@ import Particles from "react-particles-js";
 import { motion } from "framer-motion";
 import { Scrollbars } from "react-custom-scrollbars";
 import Footer from "../components/footer";
-
 import Meta from "../components/meta";
 import Head from "next/head";
 
