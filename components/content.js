@@ -17,8 +17,11 @@ import design from "../public/assets/designs.json";
 import arrow from "../public/assets/up-arrow.png";
 import { AiFillUpCircle } from "react-icons/ai";
 import uniqid from "uniqid";
+import { useRouter } from "next/router";
 
 function Content() {
+  const router = useRouter();
+
   const bounceTransition = {
     y: {
       duration: 1.5,
@@ -212,6 +215,7 @@ function Content() {
             <button
               className="text-indigo-500 mt-20 bg-transparent border border-solid border-indigo-500 hover:bg-indigo-500 hover:text-white active:bg-indigo-600 font-bold uppercase px-8 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
               type="button"
+              onClick={() => router.push("/works")}
             >
               View More
             </button>
@@ -236,6 +240,8 @@ function Content() {
             <button
               className="text-indigo-500 mt-20 bg-transparent border border-solid border-indigo-500 hover:bg-indigo-500 hover:text-white active:bg-indigo-600 font-bold uppercase px-8 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
               type="button"
+              onClick={() => router.push("/")}
+
             >
               View More
             </button>
@@ -253,6 +259,7 @@ function Content() {
             <button
               className="text-indigo-500 mt-20 bg-transparent border border-solid border-indigo-500 hover:bg-indigo-500 hover:text-white active:bg-indigo-600 font-bold uppercase px-8 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
               type="button"
+              onClick={() => router.push("/blogs")}
             >
               View More
             </button>
@@ -277,6 +284,7 @@ function Content() {
             <button
               className="text-indigo-500 mt-20 bg-transparent border border-solid border-indigo-500 hover:bg-indigo-500 hover:text-white active:bg-indigo-600 font-bold uppercase px-8 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
               type="button"
+              onClick={() => router.push("/designs")}
             >
               View More
             </button>

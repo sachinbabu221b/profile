@@ -57,7 +57,14 @@ export default function Footer() {
               <Image src={linkedin} alt="Picture of the author" width="40px" height="40px"/>
               </div> */}
             </div>
-            <div className="grid grid-cols-1 text-2xl text-white font-normal mt-8 tracking-tighter leading-tight">
+            <div
+              className="grid grid-cols-1 text-2xl text-white font-normal mt-8 tracking-tighter leading-tight"
+              onClick={() => {
+                window.open(
+                  "https://drive.google.com/file/d/1i-4nTrUiE3o7iXMcFCol7Rv3i1xLrKat/view?usp=sharing"
+                );
+              }}
+            >
               Download my resume
             </div>
             <div className="grid grid-cols-1 text-2xl text-white font-normal mt-8 tracking-tighter leading-tight">

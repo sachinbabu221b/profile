@@ -62,7 +62,7 @@ export default function Header() {
           <div className="flex justify-between items-center  py-4 md:justify-start md:space-x-10 ">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <a onClick={() => router.push("/")}>
-                <Image src={logo} width="36px" height="36px" />
+                <Image src={logo} width="42px" height="42px" />
               </a>
             </div>
             <div className="-mr-2 -my-2 md:hidden">

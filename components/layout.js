@@ -1,5 +1,7 @@
 import Particles from "react-particles-js";
 import { motion } from "framer-motion";
+import { Scrollbars } from "react-custom-scrollbars";
+import Footer from "../components/footer";
 
 import Meta from "../components/meta";
 import Head from "next/head";
@@ -92,15 +94,22 @@ export default function Layout({ preview, children }) {
           <div className="relative">
             <Meta />
             <div className="min-h-screen">
-              <motion.main
-                initial="hidden"
-                animate="enter"
-                exit="exit"
-                variants={variants}
-                transition={{ type: "linear" }}
+              <Scrollbars
+                style={{ width: "100%", height: "100vh" }}
+                autoHide
+                universal={true}
               >
-                {children}
-              </motion.main>
+                <motion.main
+                  initial="hidden"
+                  animate="enter"
+                  exit="exit"
+                  variants={variants}
+                  transition={{ type: "linear" }}
+                >
+                  {children}
+                </motion.main>
+                <Footer />
+              </Scrollbars>
             </div>
           </div>
         </div>

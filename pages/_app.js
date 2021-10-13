@@ -10,20 +10,17 @@ export default function MyApp({ Component, pageProps, router }) {
     <>
       <ThemeProvider defaultTheme="light" attribute="class">
         <Header />
-        <Scrollbars
-          style={{ width: "100%", height: "100vh" }}
-          autoHide
-          universal={true}
+
+        <AnimatePresence
+          exitBeforeEnter
+          initial={false}
+          onExitComplete={() => window.scrollTo(0, 0)}
         >
-          <AnimatePresence
-            exitBeforeEnter
-            initial={false}
-            onExitComplete={() => window.scrollTo(0, 0)}
-          >
+       
             <Component {...pageProps} key={router.route} />
-            <Footer />
-          </AnimatePresence>
-        </Scrollbars>
+       
+          {/* </Scrollbars> */}
+        </AnimatePresence>
       </ThemeProvider>
     </>
   );
