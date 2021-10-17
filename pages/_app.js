@@ -1,12 +1,26 @@
 import { AnimatePresence } from "framer-motion";
 import { ThemeProvider } from "next-themes";
 import Header from "../components/header";
-import "../styles/index.css";
+import AnimatedCursor from "../components/cursor/animatedCursor";
 
+import "../styles/index.css";
+import dynamic from "next/dynamic";
+
+// const AnimatedCursor = dynamic(() => import(''), {
+//   ssr: false
+// });
 export default function MyApp({ Component, pageProps, router }) {
   return (
     <>
-      <ThemeProvider defaultTheme="light" attribute="class">
+      {/* <AnimatedCursor
+        innerSize={24}
+        outerSize={16}
+        color="50, 11, 111"
+        outerAlpha={0.2}
+        innerScale={0.7}
+        outerScale={4}
+      /> */}
+      <ThemeProvider defaultTheme="light" attribute="style">
         <Header />
         <AnimatePresence
           exitBeforeEnter
