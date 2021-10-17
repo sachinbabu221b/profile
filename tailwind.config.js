@@ -4,7 +4,7 @@ module.exports = {
     container: {
       padding: '2rem',
     },
-    
+
     extend: {
       colors: {
         'accent-1': '#FAFAFA',

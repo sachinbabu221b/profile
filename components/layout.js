@@ -4,6 +4,7 @@ import { Scrollbars } from "react-custom-scrollbars";
 import Footer from "../components/footer";
 import Meta from "../components/meta";
 import Head from "next/head";
+import React, { useEffect, useState } from "react";
 
 export default function Layout({ preview, children }) {
   const variants = {
@@ -11,6 +12,14 @@ export default function Layout({ preview, children }) {
     enter: { opacity: 1, x: 0, y: 0 },
     exit: { opacity: 0, x: 0, y: -100 },
   };
+  const [particleSize, setParticleSize] = useState(42);
+
+  useEffect(() => {
+    console.log(`window.width`, window.innerWidth);
+    if (window.innerWidth > 425) {
+      setParticleSize(150);
+    }
+  }, []);
   return (
     <>
       <Head>
@@ -33,7 +42,7 @@ export default function Layout({ preview, children }) {
             params={{
               particles: {
                 number: {
-                  value: 260,
+                  value: particleSize,
                   density: {
                     enable: false,
                   },

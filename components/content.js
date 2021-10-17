@@ -15,29 +15,7 @@ import design from "../public/assets/designs.json";
 import arrow from "../public/assets/up-arrow.png";
 import { AiFillUpCircle } from "react-icons/ai";
 import { useRouter } from "next/router";
-import AnimatedStones from "./stones_motion";
-// const AnimatedStones = (props) => {
-//   const { keys, transitionOptions, idToScroll, imageSrc, imageAlt } = props;
-//   return (
-//     <motion.div
-//       key={keys}
-//       transition={transitionOptions}
-//       animate={{
-//         y: ["0%", "-15%"],
-//       }}
-//       whileHover={{
-//         scale: 1.3,
-//       }}
-//       onClick={() => {
-//         document
-//           .getElementById(idToScroll)
-//           .scrollIntoView({ block: "end", behavior: "smooth" });
-//       }}
-//     >
-//       <Image src={imageSrc} alt={imageAlt} />
-//     </motion.div>
-//   );
-// };
+import Image from "next/image";
 
 const Content = () => {
   const router = useRouter();
@@ -86,190 +64,239 @@ const Content = () => {
   };
   return (
     <>
-      <div className="grid grid-cols-6 ml-10 gap-y-16  mb-10" id="tops">
-        <div className="col-span-6 text-9xl font-extrabold text-transparent pb-3 bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-itim">
+      <div className="grid grid-cols-1" id="tops">
+        <div
+          className="text-6xl sm:text-9xl
+       sm:pb-3 font-extrabold text-transparent
+        bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-itim"
+        >
           Explore my <br />
           infinity stone
         </div>
-        <div className="col-span-6 text-2xl -mt-16 font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-itim">
+        <div className="text-lg sm:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-itim">
           Click on stone to explore
         </div>
-        <AnimatePresence>
-          <div className="mt-28">
-            <AnimatedStones
-              keys="orange_stone"
-              transitionOptions={bounceTransition}
-              idToScroll="tech"
-              imageSrc={orange}
-              imageAlt="Picture of the author"
-            />
-          </div>
-          <div className="mt-28">
-            <AnimatedStones
-              keys="red_stone"
-              transitionOptions={bounceTransition}
-              idToScroll="work"
-              imageSrc={red}
-              imageAlt="Picture of the author"
-            />
-          </div>
-          <div className="mt-28">
-            <AnimatedStones
-              keys="blue_stone"
-              transitionOptions={bounceTransition}
-              idToScroll="blogs"
-              imageSrc={blue}
-              imageAlt="Picture of the author"
-            />
-          </div>
-          <div className="mt-28">
-            <AnimatedStones
-              keys="violet_stone"
-              transitionOptions={bounceTransition}
-              idToScroll="design"
-              imageSrc={violet}
-              imageAlt="Picture of the author"
-            />
-          </div>
-          <div className="mt-28">
-            <AnimatedStones
-              keys="green_stone"
-              transitionOptions={bounceTransition}
-              idToScroll="design"
-              imageSrc={green}
-              imageAlt="Picture of the author"
-            />
-          </div>
-          <div className="mt-28">
-            <AnimatedStones
-              keys="yellow_stone"
-              transitionOptions={bounceTransition}
-              idToScroll="design"
-              imageSrc={yellow}
-              imageAlt="Picture of the author"
-            />
-          </div>
-        </AnimatePresence>
       </div>
+      <AnimatePresence>
+        <div class="grid grid-cols-3 sm:grid-cols-6 gap-4 mt-20 sm:mt-40">
+          <div className="font-bold text-xl font-nunito text-center mb-10 sm:text-3xl ">
+            <motion.div
+              key="orange_stone"
+              transition={bounceTransition}
+              animate={{
+                y: ["0%", "-22%"],
+              }}
+              whileHover={{
+                scale: 1.3,
+              }}
+              onClick={() => {
+                document
+                  .getElementById("works")
+                  .scrollIntoView({ block: "end", behavior: "smooth" });
+              }}
+            >
+              <Image src={orange} alt="Picture of the author" />
+            </motion.div>
+            Mind <br />
+            Stone
+          </div>
+          <div className="font-bold text-xl font-nunito text-center sm:text-3xl">
+            <motion.div
+              key="red_stone"
+              transition={bounceTransition}
+              animate={{
+                y: ["0%", "-22%"],
+              }}
+              whileHover={{
+                scale: 1.3,
+              }}
+              onClick={() => {
+                document
+                  .getElementById("tech")
+                  .scrollIntoView({ block: "end", behavior: "smooth" });
+              }}
+            >
+              <Image src={red} alt="Picture of the author" />
+            </motion.div>
+            Reality <br />
+            Stone
+          </div>
+          <div className="font-bold text-xl font-nunito text-center sm:text-3xl">
+            <motion.div
+              key="blue_stone"
+              transition={bounceTransition}
+              animate={{
+                y: ["0%", "-22%"],
+              }}
+              whileHover={{
+                scale: 1.3,
+              }}
+              onClick={() => {
+                document
+                  .getElementById("blogs")
+                  .scrollIntoView({ block: "end", behavior: "smooth" });
+              }}
+            >
+              <Image src={blue} alt="Picture of the author" />
+            </motion.div>
+            Space <br />
+            Stone
+          </div>
+          <div className="font-bold text-xl font-nunito text-center  sm:text-3xl ">
+            <motion.div
+              key="violet_stone"
+              transition={bounceTransition}
+              animate={{
+                y: ["0%", "-22%"],
+              }}
+              whileHover={{
+                scale: 1.3,
+              }}
+              onClick={() => {
+                document
+                  .getElementById("designs")
+                  .scrollIntoView({ block: "end", behavior: "smooth" });
+              }}
+            >
+              <Image src={violet} alt="Picture of the author" />
+            </motion.div>
+            Power <br />
+            Stone
+          </div>
+          <div className="font-bold text-xl font-nunito text-center sm:text-3xl ">
+            <motion.div
+              key="green_stone"
+              transition={bounceTransition}
+              animate={{
+                y: ["0%", "-22%"],
+              }}
+              whileHover={{
+                scale: 1.3,
+              }}
+              onClick={() => {
+                document
+                  .getElementById("design")
+                  .scrollIntoView({ block: "end", behavior: "smooth" });
+              }}
+            >
+              <Image src={green} alt="Picture of the author" />
+            </motion.div>
+            Time <br />
+            Stone
+          </div>
+          <div className="font-bold text-xl font-nunito text-center sm:text-3xl ">
+            <motion.div
+              key="yellow_stone"
+              transition={bounceTransition}
+              animate={{
+                y: ["0%", "-22%"],
+              }}
+              whileHover={{
+                scale: 1.3,
+              }}
+              onClick={() => {
+                document
+                  .getElementById("design")
+                  .scrollIntoView({ block: "end", behavior: "smooth" });
+              }}
+            >
+              <Image src={yellow} alt="Picture of the author" />
+            </motion.div>
+            Soul <br />
+            Stone
+          </div>
+        </div>
+      </AnimatePresence>
 
-      <div className="grid grid-cols-6 gap-2 -mt-24 ml-10 mb-10 ">
-        <div className=" p-3 rounded font-bold text-3xl mb-2 font-nunito text-center">
-          Mind Stone
+      <div
+        className="grid grid-cols-2 gap-2 mb-10 font-nunito mt-24 "
+        id="works"
+      >
+        <div className="col-span-2 text-3xl sm:text-7xl sm:p-3 font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-nunito">
+          Works
         </div>
-        <div className=" p-3 rounded font-bold text-3xl mb-2 font-nunito text-center">
-          Reality Stone
-        </div>
-        <div className=" p-3 rounded font-bold text-3xl mb-2 font-nunito text-center">
-          Space Stone
-        </div>
-        <div
-          className=" p-3 rounded font-bold text-3xl mb-2 font-nunito text-center"
-          onClick={() =>
-            document
-              .getElementById("design")
-              .scrollIntoView({ block: "end", behavior: "smooth" })
-          }
-        >
-          Power Stone
-        </div>
-        <div
-          className=" p-3 rounded font-bold text-3xl mb-2 font-nunito text-center"
-          onClick={() =>
-            document
-              .getElementById("tech")
-              .scrollIntoView({ block: "end", behavior: "smooth" })
-          }
-        >
-          Time Stone
-        </div>
-        <div className=" p-3 rounded font-bold text-3xl mb-2 font-nunito text-center">
-          Soul Stone
-        </div>
-      </div>
-      <div className="grid grid-cols-2 gap-2 ml-10 mb-10 mt-24 " id="tech">
-        <div className=" p-3   pt-28">
-          <div className="col-span-6 text-7xl  font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-nunito">
-            Works
-          </div>
-          <div className="font-nunito  text-4xl mt-12">
-            A selection of projects I've worked on, during my career as a
-            software developer.
-          </div>
+        <div className="col-span-1  text-xl sm:text-3xl sm:mt-24 mt-6 ">
+          A selection of projects I've worked on, during my career as a software
+          developer.
+          <br />
           <button
-            class="text-indigo-500 mt-16 background-transparent font-nunito font-bold  px-3 py-1 text-xl outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            class="text-indigo-500 mt-4 font-bold text-lg sm:text-xl"
             type="button"
             onClick={() => router.push("/works")}
           >
             {`--> View All`}
           </button>
         </div>
-        <div className=" p-3 rounded text-3xl">
-          <Lottie options={workOptions} height={600} width={600} />
+        <div className="mt-6 sm:mt-0 h-48 w-48 sm:h-5/6 sm:w-5/6">
+          <Lottie options={workOptions} />
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-2 ml-10 mb-10 mt-24" id="work">
-        <div className=" p-3 rounded text-3xl">
-          <Lottie options={codeOption} height={500} width={600} />
+      <div className="grid grid-cols-2 gap-2 mb-10 font-nunito mt-24" id="tech">
+        <div className="col-span-2 text-3xl sm:text-7xl sm:p-3 font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-nunito">
+          Tech Stack
         </div>
-        <div className=" p-3 pt-28 ">
-          <div className="col-span-6 text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-nunito">
-            Tech Stack
-          </div>
-          <div className="font-nunito text-4xl mt-12">
-            A selection of projects I've worked on, during my career as a
-            software developer.
-          </div>
+        <div className="mt-6 h-40 w-48 sm:h-auto sm:w-auto">
+          <Lottie options={codeOption} />
+        </div>
+        <div className=" text-xl mt-6 ml-8 sm:text-4xl">
+          Anything that which does not bite back, more focusing on the frontend.
+          <br />
           <button
-            class="text-indigo-500 mt-16 background-transparent font-nunito font-bold  px-3 py-1 text-xl outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            class="text-indigo-500 mt-4 font-bold text-lg sm:text-xl"
             type="button"
-            onClick={() => router.push("/tech")}
+            onClick={() => router.push("/works")}
           >
             {`--> View All`}
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-2 ml-10 mb-10 mt-24" id="blogs">
-        <div className=" p-3 pt-28">
-          <div className="col-span-6 text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-nunito">
-            Blogs
-          </div>
-          <div className="font-nunito text-4xl mt-12">
-            A selection of projects I've worked on, during my career as a
-            software developer.
-          </div>
+      <div
+        className="grid grid-cols-2 gap-2 mb-10 font-nunito mt-24 "
+        id="blogs"
+      >
+        <div className="col-span-2 text-3xl sm:text-7xl sm:p-3 font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-nunito">
+          Blogs
+        </div>
+        <div className="col-span-1  text-xl sm:text-4xl sm:mt-24 mt-6 ">
+          A selection of projects I've worked on, during my career as a software
+          developer.
+          <br />
           <button
-            class="text-indigo-500 mt-16 background-transparent font-nunito font-bold  px-3 py-1 text-xl outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            class="text-indigo-500 mt-4 font-bold text-lg sm:text-xl"
             type="button"
-            onClick={() => router.push("/blogs")}
+            onClick={() => router.push("/works")}
           >
             {`--> View All`}
           </button>
         </div>
-        <div className=" p-3 rounded text-3xl">
-          <Lottie options={blogOption} height={500} width={630} />
+        <div className="mt-6 sm:mt-0 h-40 w-48 sm:h-auto sm:w-auto">
+          <Lottie options={blogOption} />
         </div>
       </div>
-      <div className="grid grid-cols-2 gap-2 ml-10 mb-10 mt-24" id="design">
-        <div className=" p-3 rounded text-3xl">
-          <Lottie options={designOption} height={520} width={600} />
+
+      <div
+        className="grid grid-cols-2 gap-2 mb-10 font-nunito mt-24"
+        id="designs"
+      >
+        <div className="col-span-2 text-3xl sm:text-7xl sm:p-3 font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-nunito">
+          Designs
         </div>
-        <div className=" p-3 pt-28">
-          <div className="col-span-6 text-7xl  font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-nunito">
-            Designs
-          </div>
-          <div className="font-nunito text-4xl mt-12 ">
-            A selection of projects I've worked on, during my career as a
-            software developer.
-          </div>
+        <div className="mt-6 h-40 w-48 sm:h-5/6 sm:w-5/6">
+          <Lottie options={designOption} />
+        </div>
+        <div className=" text-xl mt-6 ml-8 sm:text-4xl">
+          Anything that which does not bite back, more focusing on the frontend.
+          <br />
           <button
-            class="text-indigo-500 mt-16 background-transparent font-nunito font-bold  px-3 py-1 text-xl outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            class="text-indigo-500 mt-4 font-bold text-lg sm:text-xl"
             type="button"
-            onClick={() => router.push("/designs")}
+            onClick={() => router.push("/works")}
           >
             {`--> View All`}
           </button>
         </div>
       </div>
+
       {/* <button
             className="fixed bottom-24 right-10 bg-none ease-linear transition-all duration-150"
             type="button"

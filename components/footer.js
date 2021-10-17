@@ -8,6 +8,7 @@ import {
   AiOutlineWhatsApp,
   AiOutlineInstagram,
 } from "react-icons/ai";
+import React, { useEffect, useState } from "react";
 
 export default function Footer() {
   const defaultOptions = {
@@ -18,12 +19,19 @@ export default function Footer() {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+  const [size, setSize] = useState(28);
 
+  useEffect(() => {
+    console.log(`window.width`, window.innerWidth);
+    if (window.innerWidth > 425) {
+      setSize(42);
+    }
+  }, []);
   return (
-    <footer className="bg-black border-t border-accent-2">
+    <footer className="bg-black border-t border-accent-2 font-itim text-white font-extrabold tracking-tighter leading-tight">
       <Container>
         <div className="grid grid-cols-3 gap-2">
-          <div className=" p-3   col-span-2 rounded  mb-2 font-itim  text-8xl text-white font-extrabold tracking-tighter leading-tight">
+          <div className="col-span-2 rounded  mb-2 text-7xl sm:text-8xl">
             Buy me a beer.
             <div class="flex flex-row mt-4">
               <div
@@ -37,11 +45,11 @@ export default function Footer() {
                     .focus()
                 }
               >
-                <AiOutlineLinkedin size={42} />
+                <AiOutlineLinkedin size={size} />
               </div>
               <div className="mr-4">
                 <AiOutlineMail
-                  size={42}
+                  size={size}
                   onClick={() =>
                     window
                       .open("mailto:sachinbabu6174@gmail.com", "_blank")
@@ -51,7 +59,7 @@ export default function Footer() {
               </div>
               <div className="mr-4">
                 <AiOutlineMedium
-                  size={42}
+                  size={size}
                   onClick={() =>
                     window
                       .open("https://sachinbabu6174.medium.com/", "_blank")
@@ -61,7 +69,7 @@ export default function Footer() {
               </div>
               <div className="mr-4">
                 <AiOutlineInstagram
-                  size={42}
+                  size={size}
                   onClick={() =>
                     window
                       .open(
@@ -74,7 +82,7 @@ export default function Footer() {
               </div>
               <div>
                 <AiOutlineWhatsApp
-                  size={42}
+                  size={size}
                   onClick={() =>
                     window
                       .open(
@@ -86,7 +94,7 @@ export default function Footer() {
                 />
               </div>
             </div>
-            <div className="grid grid-cols-1 text-xl text-white font-normal mt-48 tracking-tighter leading-tight font-itim">
+            <div className="grid grid-cols-1 text-xl font-normal mt-10 sm:mt-48">
               <div class="flex flex-row ">
                 <div
                   className="mr-8"
@@ -102,8 +110,8 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className=" p-3  rounded font-bold text-3xl mb-20 font-nunito text-center">
-            <Lottie options={defaultOptions} height={400} width={400} />
+          <div className="hidden sm:visible p-3  rounded font-bold text-3xl mb-20 font-nunito text-center">
+            <Lottie options={defaultOptions}  />
           </div>
         </div>
       </Container>
