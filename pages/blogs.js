@@ -9,38 +9,38 @@ export default function Blogs() {
   const router = useRouter();
   return (
     <>
-      <Layout>
+           <Layout>
         <Head>
-          <title>Blogs-sachin</title>
+          <title>Sachin</title>
         </Head>
         <Container>
-          <div className="grid grid-cols-4 gap-2 ml-10 gap-y-10 mb-10">
-            <div className="col-span-4 text-7xl text-left font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-nunito">
+          <div className="grid grid-cols-4 gap-2 mb-10">
+            <div className="col-span-4 text-6xl sm:text-7xl text-left font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-nunito">
               Blogs
             </div>
 
-            <div className=" p-3 rounded">
+            <div className="col-span-4 p-3 rounded">
               <Cards />
             </div>
-            <div className=" p-3 rounded">
+            <div className="col-span-4 p-3 rounded">
               <Cards />
             </div>
-            <div className=" p-3 rounded">
+            <div className="col-span-4 p-3 rounded">
               <Cards />
             </div>
-            <div className=" p-3 rounded">
+            <div className="col-span-4 p-3 rounded">
               <Cards />
             </div>
-            <div className=" p-3 rounded">
+            <div className="col-span-4 p-3 rounded">
               <Cards />
             </div>
-            <div className=" p-3 rounded">
+            <div className="col-span-4 p-3 rounded">
               <Cards />
             </div>
-            <div className=" p-3 rounded">
+            <div className="col-span-4 p-3 rounded">
               <Cards />
             </div>
-            <div className=" p-3 rounded">
+            <div className="col-span-4 p-3 rounded">
               <Cards />
             </div>
           </div>

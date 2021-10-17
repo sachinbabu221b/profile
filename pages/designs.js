@@ -12,15 +12,16 @@ function Designs() {
         </Head>
         <Container>
           <div className="grid grid-cols-3 mb-16 mt-4">
-            <div className="col-span-3 text-7xl text-left font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-nunito">
+            <div className="col-span-4 text-6xl sm:text-7xl text-left font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-nunito">
               Designs
             </div>
+
             <div className="col-span-3">
               <iframe
                 style={{
                   border: "1px solid rgba(0, 0, 0, 0.1)",
                   height: "100vh",
-                  width: "80vw",
+                  width: "85vw",
                   borderRadius: "20px",
                   background: "#cacaca",
                 }}

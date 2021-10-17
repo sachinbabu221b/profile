@@ -78,7 +78,7 @@ const Content = () => {
         </div>
       </div>
       <AnimatePresence>
-        <div class="grid grid-cols-3 sm:grid-cols-6 gap-4 mt-20 sm:mt-40">
+        <div className="grid grid-cols-3 sm:grid-cols-6 gap-4 mt-20 sm:mt-40">
           <div className="font-bold text-xl font-nunito text-center mb-10 sm:text-3xl ">
             <motion.div
               key="orange_stone"
@@ -92,7 +92,7 @@ const Content = () => {
               onClick={() => {
                 document
                   .getElementById("works")
-                  .scrollIntoView({ block: "end", behavior: "smooth" });
+                  .scrollIntoView({ block: "start", behavior: "smooth" });
               }}
             >
               <Image src={orange} alt="Picture of the author" />
@@ -220,7 +220,7 @@ const Content = () => {
           developer.
           <br />
           <button
-            class="text-indigo-500 mt-4 font-bold text-lg sm:text-xl"
+            className="text-indigo-500 mt-4 font-bold text-lg sm:text-xl"
             type="button"
             onClick={() => router.push("/works")}
           >
@@ -242,7 +242,7 @@ const Content = () => {
           Anything that which does not bite back, more focusing on the frontend.
           <br />
           <button
-            class="text-indigo-500 mt-4 font-bold text-lg sm:text-xl"
+            className="text-indigo-500 mt-4 font-bold text-lg sm:text-xl"
             type="button"
             onClick={() => router.push("/works")}
           >
@@ -262,7 +262,7 @@ const Content = () => {
           developer.
           <br />
           <button
-            class="text-indigo-500 mt-4 font-bold text-lg sm:text-xl"
+            className="text-indigo-500 mt-4 font-bold text-lg sm:text-xl"
             type="button"
             onClick={() => router.push("/works")}
           >
@@ -288,7 +288,7 @@ const Content = () => {
           Anything that which does not bite back, more focusing on the frontend.
           <br />
           <button
-            class="text-indigo-500 mt-4 font-bold text-lg sm:text-xl"
+            className="text-indigo-500 mt-4 font-bold text-lg sm:text-xl"
             type="button"
             onClick={() => router.push("/works")}
           >
