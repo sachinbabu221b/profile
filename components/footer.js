@@ -99,11 +99,11 @@ export default function Footer() {
               >
                 Download my resume
               </div>
-              <div>Handcrafted by me</div>
+              <div className="mb-20">Handcrafted by me</div>
             </div>
           </div>
         </div>
-        <div className="hidden sm:visible p-3  rounded font-bold text-3xl mb-20 font-nunito text-center">
+        <div className=" sm:visible p-3  rounded font-bold text-3xl mb-20 font-nunito text-center">
           <Lottie options={defaultOptions} />
         </div>
       </div>

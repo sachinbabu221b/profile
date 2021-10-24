@@ -19,11 +19,20 @@ export default function Works() {
               Tech Stack
             </div>
 
-            <div className="col-span-4 p-3 rounded">
-              <Cards />
+            <div className="col-span-2 p-3 rounded text-7xl">
+             Front End
             </div>
-            <div className="col-span-4 p-3 rounded">
-              <Cards />
+            <div className="col-span-2 p-3 rounded text-7xl">
+             Backend
+            </div>
+            <div className="col-span-2 p-3 rounded text-7xl">
+             Cloud
+            </div>
+            <div className="col-span-2 p-3 rounded text-7xl">
+             Extension
+            </div>
+            <div className="col-span-2 p-3 rounded text-7xl">
+             Recent Focus
             </div>
             <div className="col-span-4 p-3 rounded">
               <Cards />

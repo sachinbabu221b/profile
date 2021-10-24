@@ -233,9 +233,10 @@ const Content = () => {
         <div className="col-span-2 text-3xl sm:text-7xl sm:p-3 font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-nunito">
           Works
         </div>
-        <div className="col-span-1  text-xl sm:text-3xl sm:mt-24 mt-6 ">
+        <div className="col-span-1  text-xl sm:text-4xl sm:mt-24 mt-6 ">
           A selection of projects I've worked on, during my career as a software
-          developer.
+          developer. Started carrer my as frontend developer and now focusing on
+          complete end to end product.
           <br />
           <button
             className="text-indigo-500 mt-4 font-bold text-lg sm:text-xl"
@@ -258,6 +259,9 @@ const Content = () => {
         </div>
         <div className=" text-xl mt-6 ml-8 sm:text-4xl">
           Anything that which does not bite back, more focusing on the frontend.
+          Diving deep to knesh technologies, really not focusing on what the
+          language is overall its like same problem with different solutions.
+          Explore my tech stack so far explored....
           <br />
           <button
             className="text-indigo-500 mt-4 font-bold text-lg sm:text-xl"
@@ -273,12 +277,12 @@ const Content = () => {
         id="blogs"
       >
         <div className="col-span-2 text-3xl sm:text-7xl sm:p-3 font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-nunito">
-          Blogs
+          About me
         </div>
 
         <div className="col-span-1  text-xl sm:text-4xl sm:mt-24 mt-6 ">
-          A selection of projects I've worked on, during my career as a software
-          developer.
+          Checkout my social medias and connect with me on other platforms as
+          wells have a cup of coffee and explore new ideas
           <br />
           <button
             className="text-indigo-500 mt-4 font-bold text-lg sm:text-xl"
@@ -307,9 +311,10 @@ const Content = () => {
         </div>
 
         <InfinityGauntlet snap={snap2}>
-          <div className=" text-xl mt-6 ml-8 sm:text-4xl">
-            Anything that which does not bite back, more focusing on the
-            frontend.
+          <div className=" text-xl mt-6 ml-8 sm:text-4xl ">
+            Always had an interest in drawings new things why not focusing on
+            designing new ideas into presentable form. Explore my wicked ideas
+            designed in Figma and Adobe XD
             <br />
             <button
               className="text-indigo-500 mt-4 font-bold text-lg sm:text-xl"

@@ -39,12 +39,12 @@ const solutions = [
     href: "/tech",
     icon: ChartBarIcon,
   },
-  {
-    name: "Blogs",
-    description: "Speak directly to your customers in a more meaningful way.",
-    href: "/blogs",
-    icon: CursorClickIcon,
-  },
+  // {
+  //   name: "Blogs",
+  //   description: "Speak directly to your customers in a more meaningful way.",
+  //   href: "/blogs",
+  //   icon: CursorClickIcon,
+  // },
   {
     name: "Design",
     description: "Your customers' data will be safe and secure.",
@@ -52,7 +52,7 @@ const solutions = [
     icon: ShieldCheckIcon,
   },
   {
-    name: "Contact",
+    name: "About Me",
     description: "Your customers' data will be safe and secure.",
     href: "/contact",
     icon: SupportIcon,
@@ -127,7 +127,7 @@ export default function Header() {
                     />
                   )}
                 </span>
-                <span>
+                {/* <span>
                   <a
                     onClick={() => router.push("/blogs")}
                     className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
@@ -141,7 +141,7 @@ export default function Header() {
                       animate
                     />
                   )}
-                </span>
+                </span> */}
                 <span>
                   <a
                     onClick={() => router.push("/designs")}
@@ -163,7 +163,7 @@ export default function Header() {
                     onClick={() => router.push("/contact")}
                     className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
                   >
-                    Contact
+                    About me
                   </a>
                   {isActiveLink("/contact", router.pathname) && (
                     <motion.div

@@ -2,6 +2,8 @@ import Container from "../components/container";
 import Layout from "../components/layout";
 import React from "react";
 import Head from "next/head";
+import design from "../public/assets/Design.png";
+import Image from "next/image";
 
 function Designs() {
   return (
@@ -11,11 +13,23 @@ function Designs() {
           <title>Sachin</title>
         </Head>
         <Container>
-          <div className="grid grid-cols-3 mb-16 mt-4">
+          <div className="grid grid-cols-4 mb-16 mt-4">
             <div className="col-span-4 text-6xl sm:text-7xl text-left font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-nunito">
               Designs
             </div>
-
+            <div className="col-span-2 p-3 rounded">
+              <div className="col-span-4 text-5xl sm:text-6xl text-left font-normal  font-nunito">
+                Design inspirational things and crazy ideas into a potential
+                design using figma
+              </div>
+            </div>
+            <div className="col-span-2 p-3 rounded ">
+              <Image
+                class=" object-center rounded-lg "
+                src={design}
+                alt="Picture of the author"
+              />
+            </div>
             <div className="col-span-3">
               <iframe
                 style={{
