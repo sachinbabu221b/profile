@@ -100,7 +100,7 @@ export default function Header() {
                 <span>
                   <a
                     onClick={() => router.push("/works")}
-                    className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
+                    className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer font-itim"
                   >
                     Works
                   </a>
@@ -115,7 +115,7 @@ export default function Header() {
                 <span>
                   <a
                     onClick={() => router.push("/tech")}
-                    className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
+                    className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer font-itim"
                   >
                     Tech stack
                   </a>
@@ -145,7 +145,7 @@ export default function Header() {
                 <span>
                   <a
                     onClick={() => router.push("/designs")}
-                    className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
+                    className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer font-itim"
                   >
                     Design
                   </a>
@@ -161,7 +161,7 @@ export default function Header() {
                 <span>
                   <a
                     onClick={() => router.push("/contact")}
-                    className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer"
+                    className="text-base font-medium text-gray-500 hover:text-gray-900 cursor-pointer font-itim"
                   >
                     About me
                   </a>
@@ -210,7 +210,7 @@ export default function Header() {
                       <a
                         key={item.name}
                         href={item.href}
-                        className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                        className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 font-itim"
                       >
                         <item.icon
                           className="flex-shrink-0 h-6 w-6 text-indigo-600"

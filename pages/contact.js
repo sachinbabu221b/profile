@@ -3,6 +3,9 @@ import Container from "../components/container";
 import Layout from "../components/layout";
 import Head from "next/head";
 import React, { useEffect } from "react";
+import sachin from "../public/assets/sachin.png";
+import Image from "next/image";
+import Gallery from "react-photo-gallery"
 import {
   AiOutlineLinkedin,
   AiOutlineMail,
@@ -13,7 +16,38 @@ import {
 
 export default function Contact() {
   const router = useRouter();
-
+  const photos = [
+    {
+      src: "https://doodleipsum.com/700?i=ba4b0b8bf4feeb961f38a69c5d2dbef3",
+      width: 4,
+      height: 3,
+    },
+    {
+      src: "https://doodleipsum.com/300/abstract?i=bca1e8588e68e8c73a6b721edae668c9",
+      width: 1,
+      height: 1,
+    },
+    {
+      src: "https://doodleipsum.com/300/abstract?i=bca1e8588e68e8c73a6b721edae668c9",
+      width: 1,
+      height: 1,
+    },
+    {
+      src: "https://doodleipsum.com/300/abstract?i=bca1e8588e68e8c73a6b721edae668c9",
+      width: 1,
+      height: 1,
+    },
+    {
+      src: "https://doodleipsum.com/700?i=ba4b0b8bf4feeb961f38a69c5d2dbef3",
+      width: 4,
+      height: 3,
+    },
+    {
+      src: "https://doodleipsum.com/300/abstract?i=bca1e8588e68e8c73a6b721edae668c9",
+      width: 1,
+      height: 1,
+    },
+  ];
   return (
     <>
       <Layout>
@@ -25,6 +59,16 @@ export default function Contact() {
           <div className="grid grid-cols-2  ml-10 mb-10 min-h-screen ">
             <div className=" p-3 text-7xl text-left font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-400 to-red-600 font-nunito">
               About Me
+              <div className="col-span-4 text-5xl sm:text-6xl text-left font-normal  font-nunito ">
+                <Image
+                  class=" object-center rounded-lg "
+                  src={sachin}
+                  alt="Picture of the author"
+                />
+              </div>
+              <div className="col-span-4 text-5xl sm:text-6xl text-left font-normal  font-nunito ">
+                Sachin Babu
+              </div>
               <div className="grid grid-cols-6">
                 <span className="">
                   <AiOutlineLinkedin size={40} className="text-black" />
@@ -42,11 +86,7 @@ export default function Contact() {
                   <AiOutlineWhatsApp size={40} className="text-black" />
                 </span>
               </div>
-              <div className="col-span-4 text-5xl sm:text-6xl text-left font-normal  font-nunito mb-20 mt-20">
-                Sachin Babu photo
-                intro
-              </div>
-              <div className="col-span-4 text-5xl sm:text-6xl text-left font-normal  font-nunito mb-20 mt-20">
+              <div className="col-span-4 text-5xl sm:text-6xl text-left font-normal  font-nunito mt-10">
                 Career
               </div>
               <div class="container  mx-auto w-full ">
@@ -63,9 +103,9 @@ export default function Contact() {
                         1
                       </h1>
                     </div>
-                    <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+                    <div class="order-1 bg-green-200 rounded-lg shadow-xl w-5/12 px-6 py-4">
                       <h3 class="mb-3 font-bold text-gray-800 text-xl">
-                        Lorem Ipsum
+                        Tranzmeo
                       </h3>
                       <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">
                         Lorem Ipsum is simply dummy text of the printing and
@@ -84,9 +124,9 @@ export default function Contact() {
                         2
                       </h1>
                     </div>
-                    <div class="order-1 bg-red-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+                    <div class="order-1 bg-green-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
                       <h3 class="mb-3 font-bold text-white text-xl">
-                        Lorem Ipsum
+                        42 Square Technologies
                       </h3>
                       <p class="text-sm font-medium leading-snug tracking-wide text-white text-opacity-100">
                         Lorem Ipsum is simply dummy text of the printing and
@@ -100,7 +140,7 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-            <div>Download my resume</div>
+            <div><Gallery photos={photos} /></div>
           </div>
         </Container>
       </Layout>
